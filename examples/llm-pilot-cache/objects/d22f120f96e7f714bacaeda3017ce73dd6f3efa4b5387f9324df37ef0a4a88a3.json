@@ -1,0 +1,133 @@
+{
+  "attempts": [
+    {
+      "candidate": "I'm having issues with my connection. Could you help me reconnect?",
+      "errors": [
+        "required literal absent: SLOT_0"
+      ],
+      "mode": "paraphrase",
+      "seed": 738674873,
+      "shared_utterance_key": "ede7588036e17e78e95273a55a7d2f5f5e857f09316cfc4f7a64440619f08187",
+      "turn": 1
+    },
+    {
+      "candidate": "I'm connected. Could you help me reconnect the VPN? It stopped working.",
+      "errors": [
+        "required literal absent: SLOT_0"
+      ],
+      "mode": "paraphrase",
+      "seed": 507258040,
+      "shared_utterance_key": "ede7588036e17e78e95273a55a7d2f5f5e857f09316cfc4f7a64440619f08187",
+      "turn": 1
+    },
+    {
+      "candidate": "I'm SLOT_0. Could you help me reconnect the VPN? It stopped working.",
+      "errors": [],
+      "mode": "constrained_source_repair",
+      "seed": 507258041,
+      "shared_utterance_key": "ede7588036e17e78e95273a55a7d2f5f5e857f09316cfc4f7a64440619f08187",
+      "turn": 1
+    },
+    {
+      "candidate": "Reopen the application and try connecting again.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 738674873,
+      "shared_utterance_key": "d8bd6efc1ffb1cb8ff0e47f953ab47d3d462b42a2f4190982b529cc81cb1bd41",
+      "turn": 2
+    },
+    {
+      "candidate": "The connection works now. Thank you.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 738674873,
+      "shared_utterance_key": "6c6dc1f28881c116bc46d6156859e91d94fddbd1c7007c2bb960a8e1653d0fe2",
+      "turn": 3
+    },
+    {
+      "candidate": "Support ticket can be closed now. Thank you.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 738674873,
+      "shared_utterance_key": "744f41f1940f8666a69c70bafeb6f9aa735e2d155a5247731bbd93de99bdc975",
+      "turn": 4
+    }
+  ],
+  "config": {
+    "max_tokens": 1200,
+    "model": "qwen2.5-1.5b-instruct-q4_k_m",
+    "prompt_sha256": "edc0b9156fd109af059948adc3d59b2c1e123e28c73fc5143af925dc592d0e46",
+    "prompt_version": "batched-turns-v5",
+    "revision": "91cad51170dc346986eccefdc2dd33a9da36ead9",
+    "seed": 4242,
+    "temperature": 0.4
+  },
+  "payload_sha256": "d2f653554e187ccd7c2d86483d9e0549b1b1c6cd72ab241395938a26e561547f",
+  "plan": {
+    "channel": "call",
+    "conversation_id": "a8bc0157cfd8f56fd998e3fe",
+    "style": "natural and concise",
+    "turns": [
+      {
+        "acts": [
+          "identity_claim",
+          "troubleshooting"
+        ],
+        "event_time": null,
+        "index": 1,
+        "record_id": "fdad44f34d8aadc3ce0bced7",
+        "required_literals": [
+          "Hayden Brooks"
+        ],
+        "speaker": "caller",
+        "stage": "vpn_open",
+        "template_text": "I'm Hayden Brooks. Could you help me reconnect the VPN? It stopped working."
+      },
+      {
+        "acts": [
+          "troubleshooting"
+        ],
+        "event_time": null,
+        "index": 2,
+        "record_id": "d43826f5a0c8acdd1948f88c",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "vpn_steps",
+        "template_text": "Can you reopen the VPN application and retry the connection?"
+      },
+      {
+        "acts": [
+          "closing"
+        ],
+        "event_time": null,
+        "index": 3,
+        "record_id": "ea1fc0ffb30a0b3609fd33a3",
+        "required_literals": [],
+        "speaker": "caller",
+        "stage": "vpn_fixed",
+        "template_text": "The connection is working now. Thank you."
+      },
+      {
+        "acts": [
+          "closing"
+        ],
+        "event_time": null,
+        "index": 4,
+        "record_id": "2fdb1c1c28f147279ce9c184",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "close",
+        "template_text": "The support ticket can be closed now. Thank you."
+      }
+    ],
+    "user": "hayden.brooks"
+  },
+  "review": "automated validation; no independent human review",
+  "status": "validated",
+  "texts": [
+    "I'm Hayden Brooks. Could you help me reconnect the VPN? It stopped working.",
+    "Reopen the application and try connecting again.",
+    "The connection works now. Thank you.",
+    "Support ticket can be closed now. Thank you."
+  ]
+}

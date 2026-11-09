@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+dist/
+output/
+render_cache/
+claim_cache/
+*.egg-info/
+.env
+.env.*
+!.env.example
+.pforge-*/
+*.gguf
+*.safetensors

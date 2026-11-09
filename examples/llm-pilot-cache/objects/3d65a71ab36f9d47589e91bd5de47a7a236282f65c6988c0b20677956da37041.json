@@ -1,0 +1,123 @@
+{
+  "attempts": [
+    {
+      "candidate": "Hello, this is SLOT_0. The VPN application has a connection error.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 897831859,
+      "shared_utterance_key": "e67d6899cbd786ed375840ae29bf565ecacec216cf42fea6421a8163cee719b4",
+      "turn": 1
+    },
+    {
+      "candidate": "Please restart your VPN client before attempting the connection again.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 1903008642,
+      "shared_utterance_key": "3f28fe9c8ef82d94d516ccbe83c8d3fa22148a0a7e5e4224b5900a372dfb540b",
+      "turn": 2
+    },
+    {
+      "candidate": "It reconnects again.",
+      "errors": [
+        "planned behavior missing: closing"
+      ],
+      "mode": "paraphrase",
+      "seed": 687413809,
+      "shared_utterance_key": "c1d0c007a3abc6392a17910c124e227d815f8186e4d42721060dfc5c5121c76a",
+      "turn": 3
+    },
+    {
+      "candidate": "Everything looks resolved again.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 303900906,
+      "shared_utterance_key": "c1d0c007a3abc6392a17910c124e227d815f8186e4d42721060dfc5c5121c76a",
+      "turn": 3
+    },
+    {
+      "candidate": "Thanks for confirming, I can close the support ticket now.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 788016733,
+      "shared_utterance_key": "3efadf623a53cdb23d4c664bb53f1867ee900dd587e1bd29ff922cf1f08ef868",
+      "turn": 4
+    }
+  ],
+  "config": {
+    "max_tokens": 1200,
+    "model": "qwen2.5-1.5b-instruct-q4_k_m",
+    "prompt_sha256": "edc0b9156fd109af059948adc3d59b2c1e123e28c73fc5143af925dc592d0e46",
+    "prompt_version": "batched-turns-v5",
+    "revision": "91cad51170dc346986eccefdc2dd33a9da36ead9",
+    "seed": 4242,
+    "temperature": 0.4
+  },
+  "payload_sha256": "7c7502b618d1c3ecc4f7ddd5d82ad292e3b0962290fa52a4b666daacd208dd8f",
+  "plan": {
+    "channel": "chat",
+    "conversation_id": "92c5129e6add2f76645b8b8b",
+    "style": "natural and concise",
+    "turns": [
+      {
+        "acts": [
+          "identity_claim",
+          "troubleshooting"
+        ],
+        "event_time": null,
+        "index": 1,
+        "record_id": "5cfc6faef0b9f7a4135db17b",
+        "required_literals": [
+          "Cameron Reed"
+        ],
+        "speaker": "caller",
+        "stage": "vpn_open",
+        "template_text": "Hello, this is Cameron Reed. The VPN application is showing a connection error."
+      },
+      {
+        "acts": [
+          "troubleshooting"
+        ],
+        "event_time": null,
+        "index": 2,
+        "record_id": "2a481102081934cf5eef8257",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "vpn_steps",
+        "template_text": "Please restart your VPN client before attempting the connection again."
+      },
+      {
+        "acts": [
+          "closing"
+        ],
+        "event_time": null,
+        "index": 3,
+        "record_id": "147b38dfc05b404fdbea370e",
+        "required_literals": [],
+        "speaker": "caller",
+        "stage": "vpn_fixed",
+        "template_text": "It connects again and everything looks resolved."
+      },
+      {
+        "acts": [
+          "closing"
+        ],
+        "event_time": null,
+        "index": 4,
+        "record_id": "f3e12668ce1643aa6ae84f21",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "close",
+        "template_text": "Thanks for confirming; I can close the support ticket."
+      }
+    ],
+    "user": "cameron.reed"
+  },
+  "review": "automated validation; no independent human review",
+  "status": "validated",
+  "texts": [
+    "Hello, this is Cameron Reed. The VPN application has a connection error.",
+    "Please restart your VPN client before attempting the connection again.",
+    "Everything looks resolved again.",
+    "Thanks for confirming, I can close the support ticket now."
+  ]
+}

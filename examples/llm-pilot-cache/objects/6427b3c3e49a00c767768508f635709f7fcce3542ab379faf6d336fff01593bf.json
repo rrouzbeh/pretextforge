@@ -1,0 +1,221 @@
+{
+  "attempts": [
+    {
+      "candidate": "Hello, this is SLOT_0. I cannot use my missing phone for MFA; could we reset it?",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 1418485267,
+      "shared_utterance_key": "c7b60f55b256f65310d117b574ec6489540ac7a33e22cedb3f154f8f438a8b6e",
+      "turn": 1
+    },
+    {
+      "candidate": "First, we need approval from your registered manager for recovery.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 101080173,
+      "shared_utterance_key": "f73120aed1e6e7ab55269a65d023c0968c5a036322e2f441f157f559d91acc70",
+      "turn": 2
+    },
+    {
+      "candidate": "I have a client meeting soon and need access urgently.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 101080173,
+      "shared_utterance_key": "9ae7c82fcc44b81ef37e8515459137b4b7fa388a947439d1e24cc20205b4c15f",
+      "turn": 3
+    },
+    {
+      "candidate": "You can contact my manager for confirmation. The new number is SLOT_0.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 1418485267,
+      "shared_utterance_key": "0450a721d56d910ad2899dec83cd736e75c76fe3421a7f025f778ec033fc9eeb",
+      "turn": 4
+    },
+    {
+      "candidate": "Please wait while I submit the manager's approval request.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 101080173,
+      "shared_utterance_key": "0fa142f4b4a70b21895d102fabb451205a928280ceee4ae54379abb19617c4b5",
+      "turn": 5
+    },
+    {
+      "candidate": "The manager's approval is now recorded on the ticket.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 101080173,
+      "shared_utterance_key": "2a00d8d35f29090b54b1ce77ce588b86284e423f3a96f092af944e8032df0327",
+      "turn": 6
+    },
+    {
+      "candidate": "I will reset the MFA setup so you can enroll the new factor.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 101080173,
+      "shared_utterance_key": "4b506655482ca5a95eea44395051b9dc4dffb20065f611225393273f49f2f75d",
+      "turn": 7
+    },
+    {
+      "candidate": "The sign-in is working with the new factor. Thank you.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 1437311383,
+      "shared_utterance_key": "626f1f234279995415a247b09abe75a0af42d8f84769269981aecab1b2cdc8fb",
+      "turn": 8
+    },
+    {
+      "candidate": "I will close this ticket. Thank you for contacting support.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 493238664,
+      "shared_utterance_key": "b2e30b771be95ad433fc51c985d1603f167a7c5a126f36ab9f4bd52628ed44c9",
+      "turn": 9
+    }
+  ],
+  "config": {
+    "max_tokens": 1200,
+    "model": "qwen2.5-1.5b-instruct-q4_k_m",
+    "prompt_sha256": "edc0b9156fd109af059948adc3d59b2c1e123e28c73fc5143af925dc592d0e46",
+    "prompt_version": "batched-turns-v5",
+    "revision": "91cad51170dc346986eccefdc2dd33a9da36ead9",
+    "seed": 4242,
+    "temperature": 0.4
+  },
+  "payload_sha256": "0ce0dfecded8133f30d787b7a74d525504809e1d2c402d06931fc925cc2178a3",
+  "plan": {
+    "channel": "chat",
+    "conversation_id": "1ec4267329cdf2fd416ef814",
+    "style": "natural and concise",
+    "turns": [
+      {
+        "acts": [
+          "identity_claim",
+          "sensitive_request"
+        ],
+        "event_time": null,
+        "index": 1,
+        "record_id": "56375427af7fba4fcdbe8ceb",
+        "required_literals": [
+          "Avery Ortiz"
+        ],
+        "speaker": "caller",
+        "stage": "mfa_open_lost_phone",
+        "template_text": "Hello, this is Avery Ortiz. I cannot use my missing phone for MFA; could we reset it?"
+      },
+      {
+        "acts": [
+          "offer_verification"
+        ],
+        "event_time": null,
+        "index": 2,
+        "record_id": "98d66fb0ef85cff6faac819e",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "policy",
+        "template_text": "First we need approval from your registered manager for recovery."
+      },
+      {
+        "acts": [
+          "urgency"
+        ],
+        "event_time": null,
+        "index": 3,
+        "record_id": "ed576394ceab194c2dada5af",
+        "required_literals": [],
+        "speaker": "caller",
+        "stage": "urgency",
+        "template_text": "I have a client meeting soon and need access urgently."
+      },
+      {
+        "acts": [
+          "accept_verification",
+          "destination_change"
+        ],
+        "event_time": null,
+        "index": 4,
+        "record_id": "7d00990f81c906d7b9cdf09a",
+        "required_literals": [
+          "+1-208-555-0104"
+        ],
+        "speaker": "caller",
+        "stage": "accept",
+        "template_text": "You can contact my manager for confirmation. The new number is +1-208-555-0104."
+      },
+      {
+        "acts": [
+          "offer_verification"
+        ],
+        "event_time": null,
+        "index": 5,
+        "record_id": "5aadd60675eb7db338916c93",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "request_approval",
+        "template_text": "Please wait while I submit the manager approval request."
+      },
+      {
+        "acts": [
+          "approval_claim"
+        ],
+        "event_time": null,
+        "index": 6,
+        "record_id": "3cb64487c74a9048cba37d7f",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "approval",
+        "template_text": "The manager approval is now recorded on the ticket."
+      },
+      {
+        "acts": [
+          "action_commit"
+        ],
+        "event_time": null,
+        "index": 7,
+        "record_id": "88e4b3f1ce230861e6408a85",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "execute",
+        "template_text": "I will reset the MFA setup so you can enroll the new factor."
+      },
+      {
+        "acts": [
+          "closing"
+        ],
+        "event_time": null,
+        "index": 8,
+        "record_id": "0d417619c69f05ea06bbf49c",
+        "required_literals": [],
+        "speaker": "caller",
+        "stage": "recovered",
+        "template_text": "The sign-in is working with the new factor. Thank you."
+      },
+      {
+        "acts": [
+          "closing"
+        ],
+        "event_time": null,
+        "index": 9,
+        "record_id": "d5f4382d3d9e3e36d154b9db",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "close",
+        "template_text": "I will close this ticket. Thank you for contacting support."
+      }
+    ],
+    "user": "avery.ortiz"
+  },
+  "review": "automated validation; no independent human review",
+  "status": "validated",
+  "texts": [
+    "Hello, this is Avery Ortiz. I cannot use my missing phone for MFA; could we reset it?",
+    "First, we need approval from your registered manager for recovery.",
+    "I have a client meeting soon and need access urgently.",
+    "You can contact my manager for confirmation. The new number is +1-208-555-0104.",
+    "Please wait while I submit the manager's approval request.",
+    "The manager's approval is now recorded on the ticket.",
+    "I will reset the MFA setup so you can enroll the new factor.",
+    "The sign-in is working with the new factor. Thank you.",
+    "I will close this ticket. Thank you for contacting support."
+  ]
+}

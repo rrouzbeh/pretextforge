@@ -1,0 +1,87 @@
+{
+  "recorded_date": "2026-11-07",
+  "scope": "Generation-only working tree; cached LLM text; no detection metrics.",
+  "scenario": "scenarios/benign-heavy-week.yaml",
+  "scenario_sha256": "b5bbcc59fb6611da84a1ee45fd0f8cd1ce715679c434bc4e4f24a789ecfbc9b2",
+  "users": 500,
+  "departments": 10,
+  "workdays": 5,
+  "scripted_cases": 100,
+  "rendering_config": {
+    "max_tokens": 1200,
+    "model": "qwen3.5-4b-q4_k_m",
+    "prompt_sha256": "edc0b9156fd109af059948adc3d59b2c1e123e28c73fc5143af925dc592d0e46",
+    "prompt_version": "batched-turns-v5",
+    "revision": "e87f176479d0855a907a41277aca2f8ee7a09523",
+    "seed": 4242,
+    "temperature": 0.4
+  },
+  "profiles": {
+    "complete": {
+      "canonical_records": 122524,
+      "observed_records": 122524,
+      "dropped_records": 0,
+      "cases": 366,
+      "attacks": 10,
+      "records_per_source": {
+        "hr": 32,
+        "idp": 10176,
+        "itsm": 930,
+        "saas_files": 109420,
+        "telephony": 344,
+        "transcripts": 1622
+      },
+      "quality_passed": true,
+      "byte_identical_repeat": true,
+      "generation_seconds": 8.778,
+      "peak_process_rss_mib": 1029.1
+    },
+    "degraded": {
+      "canonical_records": 122524,
+      "observed_records": 122014,
+      "dropped_records": 510,
+      "cases": 366,
+      "attacks": 10,
+      "records_per_source": {
+        "hr": 32,
+        "idp": 10176,
+        "itsm": 930,
+        "saas_files": 109420,
+        "telephony": 250,
+        "transcripts": 1206
+      },
+      "quality_passed": true,
+      "byte_identical_repeat": true,
+      "generation_seconds": 8.649,
+      "peak_process_rss_mib": 1024.8
+    }
+  },
+  "canonical_history_matches_profiles": true,
+  "baseline_control": {
+    "quality_passed": true,
+    "attacks": 0
+  },
+  "scenario_sweep": {
+    "passed": true,
+    "valid_scenarios_exercised": 80,
+    "canonical_records_checked": 23056,
+    "failures": [],
+    "dimensions": [
+      "seed",
+      "profile",
+      "timezone offset",
+      "action input order",
+      "call/chat",
+      "recovery pretext",
+      "verification/outcome",
+      "intent",
+      "file threshold",
+      "departure/approval",
+      "baseline means"
+    ]
+  },
+  "source_report_sha256": {
+    "workload": "31c2b6fb34c45a8e95759a7d97f80b7e6f510fce21d38b593f5ba42866079c3f",
+    "scenario_sweep": "bb78eea99d672173d38004eb30fadd0279b2c0b5336491802bb25cd3a0289787"
+  }
+}

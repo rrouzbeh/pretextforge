@@ -1,0 +1,113 @@
+{
+  "attempts": [
+    {
+      "candidate": "Hello, I'm SLOT_0. The VPN connection keeps failing when I sign in.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 1903008642,
+      "shared_utterance_key": "aa3a1693b981a2e299fc9fd368149d7585d38df009b38d1e14dab69bb2e0c42c",
+      "turn": 1
+    },
+    {
+      "candidate": "Please restart your VPN client before attempting the connection again.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 1903008642,
+      "shared_utterance_key": "3f28fe9c8ef82d94d516ccbe83c8d3fa22148a0a7e5e4224b5900a372dfb540b",
+      "turn": 2
+    },
+    {
+      "candidate": "It is working now; thanks for your help.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 1903008642,
+      "shared_utterance_key": "9fd01726a4e437ea3eb0188461ccd61267fa4099234160ebae1a295c19dd0628",
+      "turn": 3
+    },
+    {
+      "candidate": "I will close the ticket with the outcome recorded. Thanks.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 1903008642,
+      "shared_utterance_key": "290e1bb6dc75e1db5d941c6e35c6b54fed4c86edb54b16af4094586514b50ea3",
+      "turn": 4
+    }
+  ],
+  "config": {
+    "max_tokens": 1200,
+    "model": "qwen2.5-1.5b-instruct-q4_k_m",
+    "prompt_sha256": "edc0b9156fd109af059948adc3d59b2c1e123e28c73fc5143af925dc592d0e46",
+    "prompt_version": "batched-turns-v5",
+    "revision": "91cad51170dc346986eccefdc2dd33a9da36ead9",
+    "seed": 4242,
+    "temperature": 0.4
+  },
+  "payload_sha256": "7fcb035ac11a7022129393ec72d8aae0b1f68416a2d139765a239003e9dce5c6",
+  "plan": {
+    "channel": "call",
+    "conversation_id": "b0e70b896eafb56e0c0c0673",
+    "style": "natural and concise",
+    "turns": [
+      {
+        "acts": [
+          "identity_claim",
+          "troubleshooting"
+        ],
+        "event_time": null,
+        "index": 1,
+        "record_id": "cffca06196b72b2555a41c2b",
+        "required_literals": [
+          "Alex Chen"
+        ],
+        "speaker": "caller",
+        "stage": "vpn_open",
+        "template_text": "Hello, I'm Alex Chen. The VPN connection keeps failing when I sign in."
+      },
+      {
+        "acts": [
+          "troubleshooting"
+        ],
+        "event_time": null,
+        "index": 2,
+        "record_id": "bd6267bc101276b25931cd3e",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "vpn_steps",
+        "template_text": "Please restart your VPN client before attempting the connection again."
+      },
+      {
+        "acts": [
+          "closing"
+        ],
+        "event_time": null,
+        "index": 3,
+        "record_id": "8d754c8d8742b7499b96205c",
+        "required_literals": [],
+        "speaker": "caller",
+        "stage": "vpn_fixed",
+        "template_text": "It is working again; thanks for your help."
+      },
+      {
+        "acts": [
+          "closing"
+        ],
+        "event_time": null,
+        "index": 4,
+        "record_id": "55d264429ede3327d6ba2ac8",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "close",
+        "template_text": "I will close the ticket with the outcome recorded. Thanks."
+      }
+    ],
+    "user": "alex.chen"
+  },
+  "review": "automated validation; no independent human review",
+  "status": "validated",
+  "texts": [
+    "Hello, I'm Alex Chen. The VPN connection keeps failing when I sign in.",
+    "Please restart your VPN client before attempting the connection again.",
+    "It is working now; thanks for your help.",
+    "I will close the ticket with the outcome recorded. Thanks."
+  ]
+}

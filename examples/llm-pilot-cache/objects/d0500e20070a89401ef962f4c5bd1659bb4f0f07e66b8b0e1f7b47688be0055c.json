@@ -1,0 +1,261 @@
+{
+  "attempts": [
+    {
+      "candidate": "This is my phone. It was left behind; can you help reset my MFA?",
+      "errors": [
+        "required literal absent: SLOT_0"
+      ],
+      "mode": "paraphrase",
+      "seed": 939288700,
+      "shared_utterance_key": "9675905e013884cdd73107da0d4822be7e73321a316ccb6897282bbf7c3a2f9a",
+      "turn": 1
+    },
+    {
+      "candidate": "This is my phone. It was left behind; can you help reset my MFA?",
+      "errors": [
+        "required literal absent: SLOT_0"
+      ],
+      "mode": "paraphrase",
+      "seed": 846292660,
+      "shared_utterance_key": "9675905e013884cdd73107da0d4822be7e73321a316ccb6897282bbf7c3a2f9a",
+      "turn": 1
+    },
+    {
+      "candidate": "This is SLOT_0. My phone was left behind; can you help reset my MFA?",
+      "errors": [],
+      "mode": "constrained_source_repair",
+      "seed": 846292661,
+      "shared_utterance_key": "9675905e013884cdd73107da0d4822be7e73321a316ccb6897282bbf7c3a2f9a",
+      "turn": 1
+    },
+    {
+      "candidate": "We need your manager's approval to complete this recovery.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 1716718785,
+      "shared_utterance_key": "21cd7218116c2befd4d21ac42c4cafcb35d4f1d573586b1b0fb32bf03f4c111b",
+      "turn": 2
+    },
+    {
+      "candidate": "My next meeting starts soon and I cannot reach the documents.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 1438404816,
+      "shared_utterance_key": "7d220b2b64f1a47c2569696d235f3c091bc2174648cdd2a380814d71c002daf8",
+      "turn": 3
+    },
+    {
+      "candidate": "May I seek your manager's approval before proceeding?",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 493238664,
+      "shared_utterance_key": "1b55f4ade7e46ee08f3b7d285a3a4f9fd4b7e5522776358aabc48b11ccf80742",
+      "turn": 4
+    },
+    {
+      "candidate": "Can you bypass the manager approval step and use my new number?",
+      "errors": [
+        "required literal absent: SLOT_0"
+      ],
+      "mode": "paraphrase",
+      "seed": 1716718785,
+      "shared_utterance_key": "a5a5f76bcfa92f03b0e7e2528066cbe470f81db161a3883958921a7921fa7cf5",
+      "turn": 5
+    },
+    {
+      "candidate": "Please bypass the manager approval step and use my new number.",
+      "errors": [
+        "required literal absent: SLOT_0"
+      ],
+      "mode": "paraphrase",
+      "seed": 1531479872,
+      "shared_utterance_key": "a5a5f76bcfa92f03b0e7e2528066cbe470f81db161a3883958921a7921fa7cf5",
+      "turn": 5
+    },
+    {
+      "candidate": "Please bypass the manager approval step and use my new number, SLOT_0.",
+      "errors": [],
+      "mode": "constrained_source_repair",
+      "seed": 1824972785,
+      "shared_utterance_key": "a5a5f76bcfa92f03b0e7e2528066cbe470f81db161a3883958921a7921fa7cf5",
+      "turn": 5
+    },
+    {
+      "candidate": "Your manager's approval is still missing from the ticket.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 1716718785,
+      "shared_utterance_key": "463a5affefb14a435f5fdc67ce916561d6fcb44253a4e474f121bda6d25d9cc1",
+      "turn": 6
+    },
+    {
+      "candidate": "I will reset your MFA; then you can register the replacement phone.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 614706520,
+      "shared_utterance_key": "a5f55b2303af817f1df2c7452261c202331af0b05ed33c80591b4aad41f9b36e",
+      "turn": 7
+    },
+    {
+      "candidate": "Access issue resolved. Thank you.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 1338112993,
+      "shared_utterance_key": "59d552403d8becd359e7e9dbe442a83095bab8c556d5cb94f596e9d355a25b44",
+      "turn": 8
+    },
+    {
+      "candidate": "I will close this ticket. Thank you for contacting support.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 493238664,
+      "shared_utterance_key": "b2e30b771be95ad433fc51c985d1603f167a7c5a126f36ab9f4bd52628ed44c9",
+      "turn": 9
+    }
+  ],
+  "config": {
+    "max_tokens": 1200,
+    "model": "qwen2.5-1.5b-instruct-q4_k_m",
+    "prompt_sha256": "edc0b9156fd109af059948adc3d59b2c1e123e28c73fc5143af925dc592d0e46",
+    "prompt_version": "batched-turns-v5",
+    "revision": "91cad51170dc346986eccefdc2dd33a9da36ead9",
+    "seed": 4242,
+    "temperature": 0.4
+  },
+  "payload_sha256": "8b5f04dfdd20d109fde0ccecf2c3eba113ea24f838e201b0d85f7eef271d5947",
+  "plan": {
+    "channel": "call",
+    "conversation_id": "4b2f3d8d2559b155bef89923",
+    "style": "natural and concise",
+    "turns": [
+      {
+        "acts": [
+          "identity_claim",
+          "sensitive_request"
+        ],
+        "event_time": null,
+        "index": 1,
+        "record_id": "338d41d289ee341f93a6fbe4",
+        "required_literals": [
+          "Avery Reed"
+        ],
+        "speaker": "caller",
+        "stage": "mfa_open_lost_phone",
+        "template_text": "This is Avery Reed. My phone was left behind; can you help reset my MFA?"
+      },
+      {
+        "acts": [
+          "offer_verification"
+        ],
+        "event_time": null,
+        "index": 2,
+        "record_id": "f375ae9c674d6d58dbf771bf",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "policy",
+        "template_text": "We will need your manager's approval to complete this recovery."
+      },
+      {
+        "acts": [
+          "urgency"
+        ],
+        "event_time": null,
+        "index": 3,
+        "record_id": "87ade0f58f5c8db5a87ecd01",
+        "required_literals": [],
+        "speaker": "caller",
+        "stage": "urgency",
+        "template_text": "My next meeting starts soon and I cannot get to the documents."
+      },
+      {
+        "acts": [
+          "offer_verification"
+        ],
+        "event_time": null,
+        "index": 4,
+        "record_id": "d11b6bf256ff239e22b69cd0",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "ask_verification",
+        "template_text": "May I seek your manager's approval before proceeding?"
+      },
+      {
+        "acts": [
+          "bypass_request",
+          "destination_change"
+        ],
+        "event_time": null,
+        "index": 5,
+        "record_id": "d0859cdfed8344689fdd4c86",
+        "required_literals": [
+          "+1-208-555-0112"
+        ],
+        "speaker": "caller",
+        "stage": "bypass",
+        "template_text": "Please bypass the manager approval step and use my new number, +1-208-555-0112."
+      },
+      {
+        "acts": [
+          "verification_missing"
+        ],
+        "event_time": null,
+        "index": 6,
+        "record_id": "f75d1e36095d4f7ed38f1343",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "missing",
+        "template_text": "Your manager's approval is still missing from the ticket."
+      },
+      {
+        "acts": [
+          "action_commit"
+        ],
+        "event_time": null,
+        "index": 7,
+        "record_id": "855473b252d824432e5a0916",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "execute",
+        "template_text": "I will reset your MFA; then you can register the replacement phone."
+      },
+      {
+        "acts": [
+          "closing"
+        ],
+        "event_time": null,
+        "index": 8,
+        "record_id": "6caae3ee8ff969e54d73447c",
+        "required_literals": [],
+        "speaker": "caller",
+        "stage": "recovered",
+        "template_text": "That resolved the access issue. Thank you."
+      },
+      {
+        "acts": [
+          "closing"
+        ],
+        "event_time": null,
+        "index": 9,
+        "record_id": "0630d72c21e6cf79fad8c9ff",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "close",
+        "template_text": "I will close this ticket. Thank you for contacting support."
+      }
+    ],
+    "user": "avery.reed"
+  },
+  "review": "automated validation; no independent human review",
+  "status": "validated",
+  "texts": [
+    "This is Avery Reed. My phone was left behind; can you help reset my MFA?",
+    "We need your manager's approval to complete this recovery.",
+    "My next meeting starts soon and I cannot reach the documents.",
+    "May I seek your manager's approval before proceeding?",
+    "Please bypass the manager approval step and use my new number, +1-208-555-0112.",
+    "Your manager's approval is still missing from the ticket.",
+    "I will reset your MFA; then you can register the replacement phone.",
+    "Access issue resolved. Thank you.",
+    "I will close this ticket. Thank you for contacting support."
+  ]
+}

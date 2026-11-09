@@ -1,0 +1,136 @@
+{
+  "attempts": [
+    {
+      "candidate": "The client disconnects when I open it.",
+      "errors": [
+        "required literal absent: SLOT_0",
+        "planned behavior missing: identity_claim",
+        "planned behavior missing: troubleshooting"
+      ],
+      "mode": "paraphrase",
+      "seed": 687413809,
+      "shared_utterance_key": "4f3813d4f8a3bdea58dd4d569ee5ef2f47cde7b9199897e6959bf3ce2f7e1b93",
+      "turn": 1
+    },
+    {
+      "candidate": "The VPN client disconnects as soon as I open it.",
+      "errors": [
+        "required literal absent: SLOT_0",
+        "planned behavior missing: identity_claim"
+      ],
+      "mode": "paraphrase",
+      "seed": 303900906,
+      "shared_utterance_key": "4f3813d4f8a3bdea58dd4d569ee5ef2f47cde7b9199897e6959bf3ce2f7e1b93",
+      "turn": 1
+    },
+    {
+      "candidate": "This is SLOT_0. The VPN client disconnects as soon as I open it.",
+      "errors": [],
+      "mode": "constrained_source_repair",
+      "seed": 1691906488,
+      "shared_utterance_key": "4f3813d4f8a3bdea58dd4d569ee5ef2f47cde7b9199897e6959bf3ce2f7e1b93",
+      "turn": 1
+    },
+    {
+      "candidate": "Restart the client and try connecting.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 687413809,
+      "shared_utterance_key": "d499121b8a39c6a1e9489469df3d701d1d11a510f3973c7f821b1933e3d8502e",
+      "turn": 2
+    },
+    {
+      "candidate": "It is working now; thanks for your help.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 1903008642,
+      "shared_utterance_key": "9fd01726a4e437ea3eb0188461ccd61267fa4099234160ebae1a295c19dd0628",
+      "turn": 3
+    },
+    {
+      "candidate": "I will close the ticket with the outcome recorded. Thanks.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 1903008642,
+      "shared_utterance_key": "290e1bb6dc75e1db5d941c6e35c6b54fed4c86edb54b16af4094586514b50ea3",
+      "turn": 4
+    }
+  ],
+  "config": {
+    "max_tokens": 1200,
+    "model": "qwen2.5-1.5b-instruct-q4_k_m",
+    "prompt_sha256": "edc0b9156fd109af059948adc3d59b2c1e123e28c73fc5143af925dc592d0e46",
+    "prompt_version": "batched-turns-v5",
+    "revision": "91cad51170dc346986eccefdc2dd33a9da36ead9",
+    "seed": 4242,
+    "temperature": 0.4
+  },
+  "payload_sha256": "eb1d2dbcb39966ae36fccd0e7d69cee2aa8c380889e8dc59a93097084f555356",
+  "plan": {
+    "channel": "call",
+    "conversation_id": "1ae010190524759ae5a3917b",
+    "style": "natural and concise",
+    "turns": [
+      {
+        "acts": [
+          "identity_claim",
+          "troubleshooting"
+        ],
+        "event_time": null,
+        "index": 1,
+        "record_id": "b631abd8cfc02ed38015f5bb",
+        "required_literals": [
+          "Pat Reed"
+        ],
+        "speaker": "caller",
+        "stage": "vpn_open",
+        "template_text": "This is Pat Reed. The VPN client disconnects as soon as I open it."
+      },
+      {
+        "acts": [
+          "troubleshooting"
+        ],
+        "event_time": null,
+        "index": 2,
+        "record_id": "adb46631da7fde7b3dd04ca2",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "vpn_steps",
+        "template_text": "Please restart the VPN client, then try connecting again."
+      },
+      {
+        "acts": [
+          "closing"
+        ],
+        "event_time": null,
+        "index": 3,
+        "record_id": "01c7b7d74ee24021a42a5a45",
+        "required_literals": [],
+        "speaker": "caller",
+        "stage": "vpn_fixed",
+        "template_text": "It is working again; thanks for your help."
+      },
+      {
+        "acts": [
+          "closing"
+        ],
+        "event_time": null,
+        "index": 4,
+        "record_id": "4bc1d1276d62d2145528b122",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "close",
+        "template_text": "I will close the ticket with the outcome recorded. Thanks."
+      }
+    ],
+    "user": "pat.reed"
+  },
+  "review": "automated validation; no independent human review",
+  "status": "validated",
+  "texts": [
+    "This is Pat Reed. The VPN client disconnects as soon as I open it.",
+    "Restart the client and try connecting.",
+    "It is working now; thanks for your help.",
+    "I will close the ticket with the outcome recorded. Thanks."
+  ]
+}

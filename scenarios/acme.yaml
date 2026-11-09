@@ -1,0 +1,77 @@
+version: "1"
+name: acme-identity-demo
+seed: 4242
+start: 2026-03-02T09:00:00Z
+workdays: 5
+observation: complete
+helpdesk_agent: agent.lee
+policy:
+  recovery_requires: manager_approval
+  bulk_download_threshold: 20
+  departure_watch_days: 14
+baseline:
+  daily_logins_per_user: 2
+  daily_files_per_user: 3
+  daily_helpdesk: 3
+users:
+  - {id: jordan.kim, name: Jordan Kim, phone: "+1-202-555-0101", department: finance}
+  - {id: dana.ortiz, name: Dana Ortiz, phone: "+1-202-555-0102", manager: jordan.kim, department: finance}
+  - {id: sam.brooks, name: Sam Brooks, phone: "+1-202-555-0103", manager: jordan.kim}
+  - {id: pat.chen, name: Pat Chen, phone: "+1-202-555-0104", manager: jordan.kim}
+  - {id: alex.reed, name: Alex Reed, phone: "+1-202-555-0105", manager: jordan.kim}
+  - {id: robin.park, name: Robin Park, phone: "+1-202-555-0106", manager: jordan.kim}
+  - {id: casey.wong, name: Casey Wong, phone: "+1-202-555-0107", manager: jordan.kim}
+  - {id: morgan.bell, name: Morgan Bell, phone: "+1-202-555-0108", manager: jordan.kim}
+  - {id: jamie.fox, name: Jamie Fox, phone: "+1-202-555-0109", manager: jordan.kim}
+  - {id: taylor.hill, name: Taylor Hill, phone: "+1-202-555-0110", manager: jordan.kim}
+  - {id: lee.morgan, name: Lee Morgan, phone: "+1-202-555-0111", manager: jordan.kim}
+  - {id: jesse.gray, name: Jesse Gray, phone: "+1-202-555-0112", manager: jordan.kim}
+  - {id: riley.stone, name: Riley Stone, phone: "+1-202-555-0113", manager: jordan.kim}
+  - {id: sky.davis, name: Sky Davis, phone: "+1-202-555-0114", manager: jordan.kim}
+  - {id: drew.young, name: Drew Young, phone: "+1-202-555-0115", manager: jordan.kim}
+  - {id: blair.ross, name: Blair Ross, phone: "+1-202-555-0116", manager: jordan.kim}
+  - {id: ari.woods, name: Ari Woods, phone: "+1-202-555-0117", manager: jordan.kim}
+  - {id: devon.lane, name: Devon Lane, phone: "+1-202-555-0118", manager: jordan.kim}
+  - {id: cameron.hart, name: Cameron Hart, phone: "+1-202-555-0119", manager: jordan.kim}
+  - {id: quinn.west, name: Quinn West, phone: "+1-202-555-0120", manager: jordan.kim}
+actions:
+  - type: helpdesk
+    id: impersonation
+    at: 2026-03-02T11:00:00Z
+    user: dana.ortiz
+    malicious: true
+    true_actor: fictional-outsider
+    channel: call
+    request: mfa_reset
+    verification: refused
+    execute: true
+    urgent: true
+    caller_number: "+1-202-555-0177"
+    new_number: "+1-202-555-0142"
+  - type: helpdesk
+    id: genuine-lost-phone
+    at: 2026-03-04T11:00:00Z
+    user: dana.ortiz
+    channel: call
+    request: mfa_reset
+    verification: approved
+    execute: true
+    urgent: true
+    caller_number: "+1-202-555-0178"
+    new_number: "+1-202-555-0143"
+  - type: files
+    id: departure-collection
+    at: 2026-03-03T11:00:00Z
+    user: sam.brooks
+    malicious: true
+    departure: true
+    count: 30
+    recipient: sam.personal@example.net
+  - type: files
+    id: approved-migration
+    at: 2026-03-05T11:00:00Z
+    user: pat.chen
+    departure: true
+    approved_migration: true
+    count: 30
+    recipient: archive@partner.example

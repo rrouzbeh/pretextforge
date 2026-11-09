@@ -1,0 +1,123 @@
+{
+  "attempts": [
+    {
+      "candidate": "Hello, this is SLOT_0. The VPN application has a connection error.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 897831859,
+      "shared_utterance_key": "e67d6899cbd786ed375840ae29bf565ecacec216cf42fea6421a8163cee719b4",
+      "turn": 1
+    },
+    {
+      "candidate": "Restart the client and try connecting.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 687413809,
+      "shared_utterance_key": "d499121b8a39c6a1e9489469df3d701d1d11a510f3973c7f821b1933e3d8502e",
+      "turn": 2
+    },
+    {
+      "candidate": "It reconnects again.",
+      "errors": [
+        "planned behavior missing: closing"
+      ],
+      "mode": "paraphrase",
+      "seed": 687413809,
+      "shared_utterance_key": "c1d0c007a3abc6392a17910c124e227d815f8186e4d42721060dfc5c5121c76a",
+      "turn": 3
+    },
+    {
+      "candidate": "Everything looks resolved again.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 303900906,
+      "shared_utterance_key": "c1d0c007a3abc6392a17910c124e227d815f8186e4d42721060dfc5c5121c76a",
+      "turn": 3
+    },
+    {
+      "candidate": "Thanks, I will close this support request now.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 129218426,
+      "shared_utterance_key": "0a121f6b089f2f7fbf607376522f54f09de8f60f275ddce3f73f10e30dfc0d66",
+      "turn": 4
+    }
+  ],
+  "config": {
+    "max_tokens": 1200,
+    "model": "qwen2.5-1.5b-instruct-q4_k_m",
+    "prompt_sha256": "edc0b9156fd109af059948adc3d59b2c1e123e28c73fc5143af925dc592d0e46",
+    "prompt_version": "batched-turns-v5",
+    "revision": "91cad51170dc346986eccefdc2dd33a9da36ead9",
+    "seed": 4242,
+    "temperature": 0.4
+  },
+  "payload_sha256": "2a5cc5adebcb71fe6361df416a218d8284394e9ab73173590bf3b1d532eb3bb3",
+  "plan": {
+    "channel": "chat",
+    "conversation_id": "3aba7bc9bfd318671ce09ff9",
+    "style": "natural and concise",
+    "turns": [
+      {
+        "acts": [
+          "identity_claim",
+          "troubleshooting"
+        ],
+        "event_time": null,
+        "index": 1,
+        "record_id": "0b528bd726b8acef5df18bfc",
+        "required_literals": [
+          "Jordan Bell"
+        ],
+        "speaker": "caller",
+        "stage": "vpn_open",
+        "template_text": "Hello, this is Jordan Bell. The VPN application is showing a connection error."
+      },
+      {
+        "acts": [
+          "troubleshooting"
+        ],
+        "event_time": null,
+        "index": 2,
+        "record_id": "4d483f6bf3fa3e3cbbae1167",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "vpn_steps",
+        "template_text": "Please restart the VPN client, then try connecting again."
+      },
+      {
+        "acts": [
+          "closing"
+        ],
+        "event_time": null,
+        "index": 3,
+        "record_id": "4862e1bade270462e91ab782",
+        "required_literals": [],
+        "speaker": "caller",
+        "stage": "vpn_fixed",
+        "template_text": "It connects again and everything looks resolved."
+      },
+      {
+        "acts": [
+          "closing"
+        ],
+        "event_time": null,
+        "index": 4,
+        "record_id": "199a00564ce87cef3dc4a46e",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "close",
+        "template_text": "Thanks, I will close this support request now."
+      }
+    ],
+    "user": "jordan.bell"
+  },
+  "review": "automated validation; no independent human review",
+  "status": "validated",
+  "texts": [
+    "Hello, this is Jordan Bell. The VPN application has a connection error.",
+    "Restart the client and try connecting.",
+    "Everything looks resolved again.",
+    "Thanks, I will close this support request now."
+  ]
+}

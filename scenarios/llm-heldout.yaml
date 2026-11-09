@@ -1,0 +1,164 @@
+version: '1'
+name: heldout-identity-week
+seed: 89110
+start: '2026-03-09T09:00:00Z'
+workdays: 5
+users:
+- id: mira.lowe
+  name: Mira Lowe
+  phone: +1-209-555-0100
+  manager: null
+  department: finance
+- id: noah.avery
+  name: Noah Avery
+  phone: +1-209-555-0101
+  manager: mira.lowe
+  department: finance
+- id: imani.price
+  name: Imani Price
+  phone: +1-209-555-0102
+  manager: mira.lowe
+  department: operations
+- id: leo.hayes
+  name: Leo Hayes
+  phone: +1-209-555-0103
+  manager: mira.lowe
+  department: operations
+- id: zara.ellis
+  name: Zara Ellis
+  phone: +1-209-555-0104
+  manager: mira.lowe
+  department: operations
+- id: nico.quinn
+  name: Nico Quinn
+  phone: +1-209-555-0105
+  manager: mira.lowe
+  department: operations
+- id: lina.ward
+  name: Lina Ward
+  phone: +1-209-555-0106
+  manager: mira.lowe
+  department: operations
+- id: omar.shah
+  name: Omar Shah
+  phone: +1-209-555-0107
+  manager: mira.lowe
+  department: operations
+- id: esme.holt
+  name: Esme Holt
+  phone: +1-209-555-0108
+  manager: mira.lowe
+  department: operations
+- id: hugo.wells
+  name: Hugo Wells
+  phone: +1-209-555-0109
+  manager: mira.lowe
+  department: operations
+- id: iris.lane
+  name: Iris Lane
+  phone: +1-209-555-0110
+  manager: mira.lowe
+  department: operations
+- id: jude.nash
+  name: Jude Nash
+  phone: +1-209-555-0111
+  manager: mira.lowe
+  department: operations
+- id: aya.baird
+  name: Aya Baird
+  phone: +1-209-555-0112
+  manager: mira.lowe
+  department: operations
+- id: arun.mills
+  name: Arun Mills
+  phone: +1-209-555-0113
+  manager: mira.lowe
+  department: operations
+- id: maya.ross
+  name: Maya Ross
+  phone: +1-209-555-0114
+  manager: mira.lowe
+  department: operations
+- id: ivan.cole
+  name: Ivan Cole
+  phone: +1-209-555-0115
+  manager: mira.lowe
+  department: operations
+- id: nina.frost
+  name: Nina Frost
+  phone: +1-209-555-0116
+  manager: mira.lowe
+  department: operations
+- id: toby.hart
+  name: Toby Hart
+  phone: +1-209-555-0117
+  manager: mira.lowe
+  department: operations
+- id: sana.dunn
+  name: Sana Dunn
+  phone: +1-209-555-0118
+  manager: mira.lowe
+  department: operations
+- id: evan.west
+  name: Evan West
+  phone: +1-209-555-0119
+  manager: mira.lowe
+  department: operations
+helpdesk_agent: agent.lee
+helpdesk_number: +1-210-555-0100
+policy:
+  recovery_requires: manager_approval
+  bulk_download_threshold: 20
+  departure_watch_days: 14
+baseline:
+  daily_logins_per_user: 0
+  daily_files_per_user: 0
+  daily_helpdesk: 3
+observation: complete
+actions:
+- type: helpdesk
+  id: heldout-impersonation
+  at: '2026-03-09T11:00:00Z'
+  user: noah.avery
+  malicious: true
+  true_actor: fictional-outsider
+  channel: call
+  request: mfa_reset
+  verification: refused
+  execute: true
+  urgent: true
+  caller_number: +1-202-555-0177
+  new_number: +1-202-555-0142
+  pretext: replacement_device
+- type: helpdesk
+  id: heldout-genuine-replacement-device
+  at: '2026-03-11T11:00:00Z'
+  user: noah.avery
+  malicious: false
+  true_actor: null
+  channel: call
+  request: mfa_reset
+  verification: approved
+  execute: true
+  urgent: true
+  caller_number: +1-202-555-0178
+  new_number: +1-202-555-0143
+  pretext: replacement_device
+- type: files
+  id: heldout-departure-collection
+  at: '2026-03-10T11:00:00Z'
+  user: imani.price
+  malicious: true
+  departure: true
+  approved_migration: false
+  count: 30
+  recipient: sam.personal@example.net
+- type: files
+  id: heldout-approved-migration
+  at: '2026-03-12T11:00:00Z'
+  user: leo.hayes
+  malicious: false
+  departure: true
+  approved_migration: true
+  count: 30
+  recipient: archive@partner.example

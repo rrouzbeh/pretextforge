@@ -1,0 +1,136 @@
+{
+  "attempts": [
+    {
+      "candidate": "The client disconnects when I open it.",
+      "errors": [
+        "required literal absent: SLOT_0",
+        "planned behavior missing: identity_claim",
+        "planned behavior missing: troubleshooting"
+      ],
+      "mode": "paraphrase",
+      "seed": 687413809,
+      "shared_utterance_key": "4f3813d4f8a3bdea58dd4d569ee5ef2f47cde7b9199897e6959bf3ce2f7e1b93",
+      "turn": 1
+    },
+    {
+      "candidate": "The VPN client disconnects as soon as I open it.",
+      "errors": [
+        "required literal absent: SLOT_0",
+        "planned behavior missing: identity_claim"
+      ],
+      "mode": "paraphrase",
+      "seed": 303900906,
+      "shared_utterance_key": "4f3813d4f8a3bdea58dd4d569ee5ef2f47cde7b9199897e6959bf3ce2f7e1b93",
+      "turn": 1
+    },
+    {
+      "candidate": "This is SLOT_0. The VPN client disconnects as soon as I open it.",
+      "errors": [],
+      "mode": "constrained_source_repair",
+      "seed": 1691906488,
+      "shared_utterance_key": "4f3813d4f8a3bdea58dd4d569ee5ef2f47cde7b9199897e6959bf3ce2f7e1b93",
+      "turn": 1
+    },
+    {
+      "candidate": "Reopen the application and try connecting again.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 738674873,
+      "shared_utterance_key": "d8bd6efc1ffb1cb8ff0e47f953ab47d3d462b42a2f4190982b529cc81cb1bd41",
+      "turn": 2
+    },
+    {
+      "candidate": "The connection works now. Thank you.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 738674873,
+      "shared_utterance_key": "6c6dc1f28881c116bc46d6156859e91d94fddbd1c7007c2bb960a8e1653d0fe2",
+      "turn": 3
+    },
+    {
+      "candidate": "Thank you. I will close the support ticket now.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 249762047,
+      "shared_utterance_key": "29b5b9a960cc135941f8b61ba39e7b00ce0d57db45f620e098b817ff2b4e93c6",
+      "turn": 4
+    }
+  ],
+  "config": {
+    "max_tokens": 1200,
+    "model": "qwen2.5-1.5b-instruct-q4_k_m",
+    "prompt_sha256": "edc0b9156fd109af059948adc3d59b2c1e123e28c73fc5143af925dc592d0e46",
+    "prompt_version": "batched-turns-v5",
+    "revision": "91cad51170dc346986eccefdc2dd33a9da36ead9",
+    "seed": 4242,
+    "temperature": 0.4
+  },
+  "payload_sha256": "b60e97fa01df9a2d477dde8fdb3c2f039edaf72f70d629debc0ea22f334cb776",
+  "plan": {
+    "channel": "chat",
+    "conversation_id": "1fe5904d0fd5bed7b0b9e3ac",
+    "style": "natural and concise",
+    "turns": [
+      {
+        "acts": [
+          "identity_claim",
+          "troubleshooting"
+        ],
+        "event_time": null,
+        "index": 1,
+        "record_id": "4ee1fa5cd06bb75d5e208f47",
+        "required_literals": [
+          "Ellis Park"
+        ],
+        "speaker": "caller",
+        "stage": "vpn_open",
+        "template_text": "This is Ellis Park. The VPN client disconnects as soon as I open it."
+      },
+      {
+        "acts": [
+          "troubleshooting"
+        ],
+        "event_time": null,
+        "index": 2,
+        "record_id": "8cd315f357c3172924856d01",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "vpn_steps",
+        "template_text": "Can you reopen the VPN application and retry the connection?"
+      },
+      {
+        "acts": [
+          "closing"
+        ],
+        "event_time": null,
+        "index": 3,
+        "record_id": "65defc9d3358f5cb40677a36",
+        "required_literals": [],
+        "speaker": "caller",
+        "stage": "vpn_fixed",
+        "template_text": "The connection is working now. Thank you."
+      },
+      {
+        "acts": [
+          "closing"
+        ],
+        "event_time": null,
+        "index": 4,
+        "record_id": "609ee185ce48fdfb8430d167",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "close",
+        "template_text": "Thank you. I will close the support ticket now."
+      }
+    ],
+    "user": "ellis.park"
+  },
+  "review": "automated validation; no independent human review",
+  "status": "validated",
+  "texts": [
+    "This is Ellis Park. The VPN client disconnects as soon as I open it.",
+    "Reopen the application and try connecting again.",
+    "The connection works now. Thank you.",
+    "Thank you. I will close the support ticket now."
+  ]
+}

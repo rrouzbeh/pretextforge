@@ -1,0 +1,240 @@
+{
+  "attempts": [
+    {
+      "candidate": "Hello, I'm lost my handset and need to recover my MFA access.",
+      "errors": [
+        "required literal absent: SLOT_0"
+      ],
+      "mode": "paraphrase",
+      "seed": 493238664,
+      "shared_utterance_key": "00c17f92955745f409f18c920810127b610d5b733c6bcd1bc7cef886c4ad14a8",
+      "turn": 1
+    },
+    {
+      "candidate": "Hello, I'm having trouble with my MFA access. Could you help me recover it?",
+      "errors": [
+        "lost-phone fact omitted",
+        "required literal absent: SLOT_0"
+      ],
+      "mode": "paraphrase",
+      "seed": 1388043271,
+      "shared_utterance_key": "00c17f92955745f409f18c920810127b610d5b733c6bcd1bc7cef886c4ad14a8",
+      "turn": 1
+    },
+    {
+      "candidate": "Hello, I'm SLOT_0. I lost my handset and need to recover my MFA access.",
+      "errors": [],
+      "mode": "constrained_source_repair",
+      "seed": 1388043272,
+      "shared_utterance_key": "00c17f92955745f409f18c920810127b610d5b733c6bcd1bc7cef886c4ad14a8",
+      "turn": 1
+    },
+    {
+      "candidate": "I can help with recovery. We need approval from your manager of record first.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 2131768677,
+      "shared_utterance_key": "47b4b95fb8b31d1eba8ef96d2a1b31b29611d6c37aeb143b8bf980327459d8c5",
+      "turn": 2
+    },
+    {
+      "candidate": "May I seek your manager's approval before proceeding?",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 493238664,
+      "shared_utterance_key": "1b55f4ade7e46ee08f3b7d285a3a4f9fd4b7e5522776358aabc48b11ccf80742",
+      "turn": 3
+    },
+    {
+      "candidate": "Please use as the replacement number.",
+      "errors": [
+        "required literal absent: SLOT_0"
+      ],
+      "mode": "paraphrase",
+      "seed": 493238664,
+      "shared_utterance_key": "d90841717135eef0e90a8b72c38788a6213b41573d17a9ca8effc81aad9d0b07",
+      "turn": 4
+    },
+    {
+      "candidate": "Please use your replacement number.",
+      "errors": [
+        "required literal absent: SLOT_0"
+      ],
+      "mode": "paraphrase",
+      "seed": 1388043271,
+      "shared_utterance_key": "d90841717135eef0e90a8b72c38788a6213b41573d17a9ca8effc81aad9d0b07",
+      "turn": 4
+    },
+    {
+      "candidate": "Please use SLOT_0 as the replacement number.",
+      "errors": [],
+      "mode": "constrained_source_repair",
+      "seed": 1388043272,
+      "shared_utterance_key": "d90841717135eef0e90a8b72c38788a6213b41573d17a9ca8effc81aad9d0b07",
+      "turn": 4
+    },
+    {
+      "candidate": "There is no manager approval recorded for this recovery.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 493238664,
+      "shared_utterance_key": "9c31e0bf341cbf3d9d468f8246ddfa98b2b929a6106b6660d133c91f5454c752",
+      "turn": 5
+    },
+    {
+      "candidate": "I will hold the recovery until we complete verification.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 493238664,
+      "shared_utterance_key": "5b4d59763036e3423866a108100dcbcc9cd193f97997833c1af524cff98f3a36",
+      "turn": 6
+    },
+    {
+      "candidate": "Understood. Thank you for checking the request.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 493238664,
+      "shared_utterance_key": "5ac2a8d71ecec7b566487e559de891f341dbbaea9ad3e0098413ae7f2fcd7373",
+      "turn": 7
+    },
+    {
+      "candidate": "I will close the ticket with the outcome recorded. Thanks.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 1903008642,
+      "shared_utterance_key": "290e1bb6dc75e1db5d941c6e35c6b54fed4c86edb54b16af4094586514b50ea3",
+      "turn": 8
+    }
+  ],
+  "config": {
+    "max_tokens": 1200,
+    "model": "qwen2.5-1.5b-instruct-q4_k_m",
+    "prompt_sha256": "edc0b9156fd109af059948adc3d59b2c1e123e28c73fc5143af925dc592d0e46",
+    "prompt_version": "batched-turns-v5",
+    "revision": "91cad51170dc346986eccefdc2dd33a9da36ead9",
+    "seed": 4242,
+    "temperature": 0.4
+  },
+  "payload_sha256": "f369d8a09c5499437304257ba3057127f5010388919ad4e828490c23345ee182",
+  "plan": {
+    "channel": "chat",
+    "conversation_id": "44447182e4c34a85b3062d3e",
+    "style": "natural and concise",
+    "turns": [
+      {
+        "acts": [
+          "identity_claim",
+          "sensitive_request"
+        ],
+        "event_time": null,
+        "index": 1,
+        "record_id": "050a7f25673620697cc7b6fe",
+        "required_literals": [
+          "Harper Kim"
+        ],
+        "speaker": "caller",
+        "stage": "mfa_open_lost_phone",
+        "template_text": "Hello, I'm Harper Kim. I lost my handset and need to recover my MFA access."
+      },
+      {
+        "acts": [
+          "offer_verification"
+        ],
+        "event_time": null,
+        "index": 2,
+        "record_id": "7cb355e749cbba6205e68d7f",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "policy",
+        "template_text": "I can help with recovery. We need approval from your manager of record first."
+      },
+      {
+        "acts": [
+          "offer_verification"
+        ],
+        "event_time": null,
+        "index": 3,
+        "record_id": "5401826b3b63ff1b9e06bc81",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "ask_verification",
+        "template_text": "May I seek your manager's approval before proceeding?"
+      },
+      {
+        "acts": [
+          "destination_change"
+        ],
+        "event_time": null,
+        "index": 4,
+        "record_id": "7b3e66ab6ae6e4ebaad06e7f",
+        "required_literals": [
+          "+1-208-555-0111"
+        ],
+        "speaker": "caller",
+        "stage": "destination",
+        "template_text": "Please use +1-208-555-0111 as the replacement number."
+      },
+      {
+        "acts": [
+          "verification_missing"
+        ],
+        "event_time": null,
+        "index": 5,
+        "record_id": "6ec6193c3aff720ac637f942",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "missing",
+        "template_text": "There is no manager approval recorded for this recovery."
+      },
+      {
+        "acts": [
+          "action_hold"
+        ],
+        "event_time": null,
+        "index": 6,
+        "record_id": "a62474b5bb56df7cb5c34115",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "deny",
+        "template_text": "I will hold the recovery until we complete verification."
+      },
+      {
+        "acts": [
+          "closing"
+        ],
+        "event_time": null,
+        "index": 7,
+        "record_id": "f6b0dd548d3855282a6196a1",
+        "required_literals": [],
+        "speaker": "caller",
+        "stage": "denied_closing",
+        "template_text": "Understood. Thank you for checking the request."
+      },
+      {
+        "acts": [
+          "closing"
+        ],
+        "event_time": null,
+        "index": 8,
+        "record_id": "e9a00662bd86f49779bfc366",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "close",
+        "template_text": "I will close the ticket with the outcome recorded. Thanks."
+      }
+    ],
+    "user": "harper.kim"
+  },
+  "review": "automated validation; no independent human review",
+  "status": "validated",
+  "texts": [
+    "Hello, I'm Harper Kim. I lost my handset and need to recover my MFA access.",
+    "I can help with recovery. We need approval from your manager of record first.",
+    "May I seek your manager's approval before proceeding?",
+    "Please use +1-208-555-0111 as the replacement number.",
+    "There is no manager approval recorded for this recovery.",
+    "I will hold the recovery until we complete verification.",
+    "Understood. Thank you for checking the request.",
+    "I will close the ticket with the outcome recorded. Thanks."
+  ]
+}

@@ -1,0 +1,262 @@
+{
+  "attempts": [
+    {
+      "candidate": "I'm lost. My phone is missing and I need an MFA reset.",
+      "errors": [
+        "required literal absent: SLOT_0"
+      ],
+      "mode": "paraphrase",
+      "seed": 1437311383,
+      "shared_utterance_key": "e9662d53bb6a9d06851bcb5655fe840c98fd8f300283ccf270dbe313bb0d625a",
+      "turn": 1
+    },
+    {
+      "candidate": "My phone is lost. I need an MFA reset.",
+      "errors": [
+        "required literal absent: SLOT_0",
+        "planned behavior missing: identity_claim"
+      ],
+      "mode": "paraphrase",
+      "seed": 1226052733,
+      "shared_utterance_key": "e9662d53bb6a9d06851bcb5655fe840c98fd8f300283ccf270dbe313bb0d625a",
+      "turn": 1
+    },
+    {
+      "candidate": "I'm SLOT_0, calling because my phone is lost. I need an MFA reset.",
+      "errors": [],
+      "mode": "constrained_source_repair",
+      "seed": 1226052734,
+      "shared_utterance_key": "e9662d53bb6a9d06851bcb5655fe840c98fd8f300283ccf270dbe313bb0d625a",
+      "turn": 1
+    },
+    {
+      "candidate": "For account recovery, manager approval is needed through the ticket.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 1437311383,
+      "shared_utterance_key": "bdb91695ba04a37e40c7555ffad5e3512eec028e68d3ca524982acaa1ee37950",
+      "turn": 2
+    },
+    {
+      "candidate": "My shift starts soon so I hope to resolve this quickly.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 1437311383,
+      "shared_utterance_key": "fcf4a0201ad1c0a6cd3ec47083862ef11fcebe473865b6509f2b4f4643180970",
+      "turn": 3
+    },
+    {
+      "candidate": "Yes, please ask my manager. Use your slot for the replacement factor after approval.",
+      "errors": [
+        "required literal absent: SLOT_0"
+      ],
+      "mode": "paraphrase",
+      "seed": 1437311383,
+      "shared_utterance_key": "b90d5bdcf45c6cd3dc70d88d4180a786399628223a191e8f2bc19e09bbec66ac",
+      "turn": 4
+    },
+    {
+      "candidate": "Ask my manager, use the replacement factor after approval.",
+      "errors": [
+        "required literal absent: SLOT_0"
+      ],
+      "mode": "paraphrase",
+      "seed": 1226052733,
+      "shared_utterance_key": "b90d5bdcf45c6cd3dc70d88d4180a786399628223a191e8f2bc19e09bbec66ac",
+      "turn": 4
+    },
+    {
+      "candidate": "Yes, please ask my manager. Use SLOT_0 for the replacement factor after approval.",
+      "errors": [],
+      "mode": "constrained_source_repair",
+      "seed": 1226052734,
+      "shared_utterance_key": "b90d5bdcf45c6cd3dc70d88d4180a786399628223a191e8f2bc19e09bbec66ac",
+      "turn": 4
+    },
+    {
+      "candidate": "Please give me a moment to request your manager's approval.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 1437311383,
+      "shared_utterance_key": "22f5e8927b4206cd038d20ae5e2fe68fb8f50d39c1a80c9f151a027c2803b15e",
+      "turn": 5
+    },
+    {
+      "candidate": "The recovery approval from your manager is now recorded.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 1437311383,
+      "shared_utterance_key": "21bb9c4aeebcf265de4a071434c90401bbeff2cbacd5a74ceba43c29f4846f4f",
+      "turn": 6
+    },
+    {
+      "candidate": "I will reset MFA now so you can enroll the replacement factor.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 1437311383,
+      "shared_utterance_key": "c9a871e8d873bd266c84983a8109d860de0b1e563612cae88cbd2582cbf8f75e",
+      "turn": 7
+    },
+    {
+      "candidate": "The sign-in is working with the new factor. Thank you.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 1437311383,
+      "shared_utterance_key": "626f1f234279995415a247b09abe75a0af42d8f84769269981aecab1b2cdc8fb",
+      "turn": 8
+    },
+    {
+      "candidate": "I will close the ticket and record the result. Thank you.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 2131768677,
+      "shared_utterance_key": "b72853d47697924558a69ca43eea69e6fc96f5e82a14fb040e50ec71482094e4",
+      "turn": 9
+    }
+  ],
+  "config": {
+    "max_tokens": 1200,
+    "model": "qwen2.5-1.5b-instruct-q4_k_m",
+    "prompt_sha256": "edc0b9156fd109af059948adc3d59b2c1e123e28c73fc5143af925dc592d0e46",
+    "prompt_version": "batched-turns-v5",
+    "revision": "91cad51170dc346986eccefdc2dd33a9da36ead9",
+    "seed": 4242,
+    "temperature": 0.4
+  },
+  "payload_sha256": "67f6c56302173e95988fcbf99b1b47e17e28121ad87ed8778fc2cab4073b69b0",
+  "plan": {
+    "channel": "call",
+    "conversation_id": "ceb8f45c3d3fb816689fe3d2",
+    "style": "natural and concise",
+    "turns": [
+      {
+        "acts": [
+          "identity_claim",
+          "sensitive_request"
+        ],
+        "event_time": null,
+        "index": 1,
+        "record_id": "96543142879a06402fb1a79d",
+        "required_literals": [
+          "Avery Chen"
+        ],
+        "speaker": "caller",
+        "stage": "mfa_open_lost_phone",
+        "template_text": "I'm Avery Chen, calling because my phone is lost. I need an MFA reset."
+      },
+      {
+        "acts": [
+          "offer_verification"
+        ],
+        "event_time": null,
+        "index": 2,
+        "record_id": "08fd44cbdc8f3482690f83b7",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "policy",
+        "template_text": "For account recovery I must obtain manager approval through the ticket."
+      },
+      {
+        "acts": [
+          "urgency"
+        ],
+        "event_time": null,
+        "index": 3,
+        "record_id": "13a62c48f1c07db34eb93853",
+        "required_literals": [],
+        "speaker": "caller",
+        "stage": "urgency",
+        "template_text": "My shift starts shortly, so I am hoping we can resolve this quickly."
+      },
+      {
+        "acts": [
+          "accept_verification",
+          "destination_change"
+        ],
+        "event_time": null,
+        "index": 4,
+        "record_id": "a0dd8c311e8e3a373120d383",
+        "required_literals": [
+          "+1-208-555-0101"
+        ],
+        "speaker": "caller",
+        "stage": "accept",
+        "template_text": "Yes, please ask my manager. Use +1-208-555-0101 for the replacement factor after approval."
+      },
+      {
+        "acts": [
+          "offer_verification"
+        ],
+        "event_time": null,
+        "index": 5,
+        "record_id": "5a106aa69516e3532d40976b",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "request_approval",
+        "template_text": "Please give me a moment to request your manager's approval."
+      },
+      {
+        "acts": [
+          "approval_claim"
+        ],
+        "event_time": null,
+        "index": 6,
+        "record_id": "43dbca1e0053d9306396ae96",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "approval",
+        "template_text": "The recovery approval from your manager is now recorded."
+      },
+      {
+        "acts": [
+          "action_commit"
+        ],
+        "event_time": null,
+        "index": 7,
+        "record_id": "b4a688664e81ab0229ace97f",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "execute",
+        "template_text": "I will reset MFA now so you can enroll the replacement factor."
+      },
+      {
+        "acts": [
+          "closing"
+        ],
+        "event_time": null,
+        "index": 8,
+        "record_id": "adfc8b7f2f7bc6425ae9915d",
+        "required_literals": [],
+        "speaker": "caller",
+        "stage": "recovered",
+        "template_text": "The sign-in is working with the new factor. Thank you."
+      },
+      {
+        "acts": [
+          "closing"
+        ],
+        "event_time": null,
+        "index": 9,
+        "record_id": "3d9c4788c228f8350d4062cd",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "close",
+        "template_text": "I will close the ticket and record the result. Thank you."
+      }
+    ],
+    "user": "avery.chen"
+  },
+  "review": "automated validation; no independent human review",
+  "status": "validated",
+  "texts": [
+    "I'm Avery Chen, calling because my phone is lost. I need an MFA reset.",
+    "For account recovery, manager approval is needed through the ticket.",
+    "My shift starts soon so I hope to resolve this quickly.",
+    "Yes, please ask my manager. Use +1-208-555-0101 for the replacement factor after approval.",
+    "Please give me a moment to request your manager's approval.",
+    "The recovery approval from your manager is now recorded.",
+    "I will reset MFA now so you can enroll the replacement factor.",
+    "The sign-in is working with the new factor. Thank you.",
+    "I will close the ticket and record the result. Thank you."
+  ]
+}

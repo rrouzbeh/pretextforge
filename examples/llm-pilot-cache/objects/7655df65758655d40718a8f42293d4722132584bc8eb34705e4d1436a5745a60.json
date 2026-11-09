@@ -1,0 +1,113 @@
+{
+  "attempts": [
+    {
+      "candidate": "Hi, this is SLOT_0. My VPN cannot connect this morning.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 687413809,
+      "shared_utterance_key": "a1b3f5b98c313fd10e2eb2c48d3e43ebbfd33835065918030cb30f6df7fa636e",
+      "turn": 1
+    },
+    {
+      "candidate": "Restart the client and try connecting.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 687413809,
+      "shared_utterance_key": "d499121b8a39c6a1e9489469df3d701d1d11a510f3973c7f821b1933e3d8502e",
+      "turn": 2
+    },
+    {
+      "candidate": "VPN is working after restart. Thanks.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 738674873,
+      "shared_utterance_key": "bae0ced15728fad892224444c6b18f4ff1522d4bd843db084c21eec2194eaf75",
+      "turn": 3
+    },
+    {
+      "candidate": "Thank you for the update. This support ticket will be closed.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 605831863,
+      "shared_utterance_key": "8da2fae9b1e3a95fc09a52dba4ba1ab4592f88b527fed4b289d0713010d521fb",
+      "turn": 4
+    }
+  ],
+  "config": {
+    "max_tokens": 1200,
+    "model": "qwen2.5-1.5b-instruct-q4_k_m",
+    "prompt_sha256": "edc0b9156fd109af059948adc3d59b2c1e123e28c73fc5143af925dc592d0e46",
+    "prompt_version": "batched-turns-v5",
+    "revision": "91cad51170dc346986eccefdc2dd33a9da36ead9",
+    "seed": 4242,
+    "temperature": 0.4
+  },
+  "payload_sha256": "4c574ad8ed7f2405ebb3f875696ee8f1a32024e0b3f334d8b680197a622ef919",
+  "plan": {
+    "channel": "call",
+    "conversation_id": "8a63c8e9744ba9319b5a83f2",
+    "style": "natural and concise",
+    "turns": [
+      {
+        "acts": [
+          "identity_claim",
+          "troubleshooting"
+        ],
+        "event_time": null,
+        "index": 1,
+        "record_id": "ff567f5e5a0ecf2a26b96e76",
+        "required_literals": [
+          "Rowan Park"
+        ],
+        "speaker": "caller",
+        "stage": "vpn_open",
+        "template_text": "Hi, this is Rowan Park. My VPN client cannot connect this morning."
+      },
+      {
+        "acts": [
+          "troubleshooting"
+        ],
+        "event_time": null,
+        "index": 2,
+        "record_id": "0589a8ca87c3d93e169aef4d",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "vpn_steps",
+        "template_text": "Please restart the VPN client, then try connecting again."
+      },
+      {
+        "acts": [
+          "closing"
+        ],
+        "event_time": null,
+        "index": 3,
+        "record_id": "4574931bd3f33b6309a4e698",
+        "required_literals": [],
+        "speaker": "caller",
+        "stage": "vpn_fixed",
+        "template_text": "The VPN is working after the restart. Thanks."
+      },
+      {
+        "acts": [
+          "closing"
+        ],
+        "event_time": null,
+        "index": 4,
+        "record_id": "0a06af59f69be80b97316d6e",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "close",
+        "template_text": "Thank you for the update. This support ticket will be closed."
+      }
+    ],
+    "user": "rowan.park"
+  },
+  "review": "automated validation; no independent human review",
+  "status": "validated",
+  "texts": [
+    "Hi, this is Rowan Park. My VPN cannot connect this morning.",
+    "Restart the client and try connecting.",
+    "VPN is working after restart. Thanks.",
+    "Thank you for the update. This support ticket will be closed."
+  ]
+}

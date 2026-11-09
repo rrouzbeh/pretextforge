@@ -1,0 +1,113 @@
+{
+  "attempts": [
+    {
+      "candidate": "Hi, I'm SLOT_0. I cannot connect to the VPN from my work computer.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 1903008642,
+      "shared_utterance_key": "904f3983e6bb9cbecf430298efc42cec952c1865441f4394bace40e45de908fa",
+      "turn": 1
+    },
+    {
+      "candidate": "Close the VPN client completely and reconnect.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 738674873,
+      "shared_utterance_key": "0c8b1a568bb9e2f58486ee6fe7f1868c194f863061b39b3d013df619ac6bb671",
+      "turn": 2
+    },
+    {
+      "candidate": "Connection is successful now, thank you.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 738674873,
+      "shared_utterance_key": "8e918bfa321e023fad24166c917be6e47bce21f2de23102a6a599fff057e4314",
+      "turn": 3
+    },
+    {
+      "candidate": "Thank you. I will close the support ticket now.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 249762047,
+      "shared_utterance_key": "29b5b9a960cc135941f8b61ba39e7b00ce0d57db45f620e098b817ff2b4e93c6",
+      "turn": 4
+    }
+  ],
+  "config": {
+    "max_tokens": 1200,
+    "model": "qwen2.5-1.5b-instruct-q4_k_m",
+    "prompt_sha256": "edc0b9156fd109af059948adc3d59b2c1e123e28c73fc5143af925dc592d0e46",
+    "prompt_version": "batched-turns-v5",
+    "revision": "91cad51170dc346986eccefdc2dd33a9da36ead9",
+    "seed": 4242,
+    "temperature": 0.4
+  },
+  "payload_sha256": "f275c1b09626dc0513e0d75bf3ea5ba225be5628e32cfcac8b3fb3b5a875c22a",
+  "plan": {
+    "channel": "chat",
+    "conversation_id": "73c5382169063a0070863441",
+    "style": "natural and concise",
+    "turns": [
+      {
+        "acts": [
+          "identity_claim",
+          "troubleshooting"
+        ],
+        "event_time": null,
+        "index": 1,
+        "record_id": "abac14d0304c5a5ba11769a5",
+        "required_literals": [
+          "Riley Ortiz"
+        ],
+        "speaker": "caller",
+        "stage": "vpn_open",
+        "template_text": "Hi, I'm Riley Ortiz. I cannot connect to the VPN from my work computer."
+      },
+      {
+        "acts": [
+          "troubleshooting"
+        ],
+        "event_time": null,
+        "index": 2,
+        "record_id": "7af44673d31f3e6af4d2d611",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "vpn_steps",
+        "template_text": "Please close the VPN client completely and then connect again."
+      },
+      {
+        "acts": [
+          "closing"
+        ],
+        "event_time": null,
+        "index": 3,
+        "record_id": "17fa45640dcc1a9d75b9ac6d",
+        "required_literals": [],
+        "speaker": "caller",
+        "stage": "vpn_fixed",
+        "template_text": "I can connect successfully now, thank you."
+      },
+      {
+        "acts": [
+          "closing"
+        ],
+        "event_time": null,
+        "index": 4,
+        "record_id": "3e0beaa5ef2e6a0f294b7b2c",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "close",
+        "template_text": "Thank you. I will close the support ticket now."
+      }
+    ],
+    "user": "riley.ortiz"
+  },
+  "review": "automated validation; no independent human review",
+  "status": "validated",
+  "texts": [
+    "Hi, I'm Riley Ortiz. I cannot connect to the VPN from my work computer.",
+    "Close the VPN client completely and reconnect.",
+    "Connection is successful now, thank you.",
+    "Thank you. I will close the support ticket now."
+  ]
+}

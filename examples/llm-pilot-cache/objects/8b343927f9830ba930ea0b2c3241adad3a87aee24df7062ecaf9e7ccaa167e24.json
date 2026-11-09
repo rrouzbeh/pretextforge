@@ -1,0 +1,133 @@
+{
+  "attempts": [
+    {
+      "candidate": "I'm having issues with my connection. Could you help me reconnect?",
+      "errors": [
+        "required literal absent: SLOT_0"
+      ],
+      "mode": "paraphrase",
+      "seed": 738674873,
+      "shared_utterance_key": "ede7588036e17e78e95273a55a7d2f5f5e857f09316cfc4f7a64440619f08187",
+      "turn": 1
+    },
+    {
+      "candidate": "I'm connected. Could you help me reconnect the VPN? It stopped working.",
+      "errors": [
+        "required literal absent: SLOT_0"
+      ],
+      "mode": "paraphrase",
+      "seed": 507258040,
+      "shared_utterance_key": "ede7588036e17e78e95273a55a7d2f5f5e857f09316cfc4f7a64440619f08187",
+      "turn": 1
+    },
+    {
+      "candidate": "I'm SLOT_0. Could you help me reconnect the VPN? It stopped working.",
+      "errors": [],
+      "mode": "constrained_source_repair",
+      "seed": 507258041,
+      "shared_utterance_key": "ede7588036e17e78e95273a55a7d2f5f5e857f09316cfc4f7a64440619f08187",
+      "turn": 1
+    },
+    {
+      "candidate": "Try reconnecting after restarting the client.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 687413809,
+      "shared_utterance_key": "348c91ccf6d812282340c368f48ed66efd884422d424a99fa9c7e741132aa30e",
+      "turn": 2
+    },
+    {
+      "candidate": "VPN is working after restart. Thanks.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 738674873,
+      "shared_utterance_key": "bae0ced15728fad892224444c6b18f4ff1522d4bd843db084c21eec2194eaf75",
+      "turn": 3
+    },
+    {
+      "candidate": "Thank you. I will close the support ticket now.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 249762047,
+      "shared_utterance_key": "29b5b9a960cc135941f8b61ba39e7b00ce0d57db45f620e098b817ff2b4e93c6",
+      "turn": 4
+    }
+  ],
+  "config": {
+    "max_tokens": 1200,
+    "model": "qwen2.5-1.5b-instruct-q4_k_m",
+    "prompt_sha256": "edc0b9156fd109af059948adc3d59b2c1e123e28c73fc5143af925dc592d0e46",
+    "prompt_version": "batched-turns-v5",
+    "revision": "91cad51170dc346986eccefdc2dd33a9da36ead9",
+    "seed": 4242,
+    "temperature": 0.4
+  },
+  "payload_sha256": "4e599b6cb5b8b560850fb6aab552486802b9e273c406ed18d8351287bec5c4ed",
+  "plan": {
+    "channel": "call",
+    "conversation_id": "4c433461cc945142211166ae",
+    "style": "natural and concise",
+    "turns": [
+      {
+        "acts": [
+          "identity_claim",
+          "troubleshooting"
+        ],
+        "event_time": null,
+        "index": 1,
+        "record_id": "07adfd8bde3903bce9b0ac11",
+        "required_literals": [
+          "Terry Bell"
+        ],
+        "speaker": "caller",
+        "stage": "vpn_open",
+        "template_text": "I'm Terry Bell. Could you help me reconnect the VPN? It stopped working."
+      },
+      {
+        "acts": [
+          "troubleshooting"
+        ],
+        "event_time": null,
+        "index": 2,
+        "record_id": "c31efa4ffc483087155fe826",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "vpn_steps",
+        "template_text": "Try reconnecting after a restart of the VPN client."
+      },
+      {
+        "acts": [
+          "closing"
+        ],
+        "event_time": null,
+        "index": 3,
+        "record_id": "0b163d0ab481e20b433fc874",
+        "required_literals": [],
+        "speaker": "caller",
+        "stage": "vpn_fixed",
+        "template_text": "The VPN is working after the restart. Thanks."
+      },
+      {
+        "acts": [
+          "closing"
+        ],
+        "event_time": null,
+        "index": 4,
+        "record_id": "52785d1d5979c26f02e9efae",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "close",
+        "template_text": "Thank you. I will close the support ticket now."
+      }
+    ],
+    "user": "terry.bell"
+  },
+  "review": "automated validation; no independent human review",
+  "status": "validated",
+  "texts": [
+    "I'm Terry Bell. Could you help me reconnect the VPN? It stopped working.",
+    "Try reconnecting after restarting the client.",
+    "VPN is working after restart. Thanks.",
+    "Thank you. I will close the support ticket now."
+  ]
+}

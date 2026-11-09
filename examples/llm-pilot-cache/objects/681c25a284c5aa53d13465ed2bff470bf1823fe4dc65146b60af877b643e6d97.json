@@ -1,0 +1,113 @@
+{
+  "attempts": [
+    {
+      "candidate": "Hi, I'm SLOT_0. I cannot connect to the VPN from my work computer.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 1903008642,
+      "shared_utterance_key": "904f3983e6bb9cbecf430298efc42cec952c1865441f4394bace40e45de908fa",
+      "turn": 1
+    },
+    {
+      "candidate": "Please disconnect the VPN, restart its client, and check the connection.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 1903008642,
+      "shared_utterance_key": "f30399db21eff5866dc83be34d2356679bb2d54b1cea487d55a741ef91e55585",
+      "turn": 2
+    },
+    {
+      "candidate": "The VPN connects now, thank you.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 1903008642,
+      "shared_utterance_key": "c7f9f51c8684e7dcb0eb1af998f3efdeae7d31aeb7a7ebc5422a8fbd9e787567",
+      "turn": 3
+    },
+    {
+      "candidate": "I will close the ticket with the outcome recorded. Thanks.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 1903008642,
+      "shared_utterance_key": "290e1bb6dc75e1db5d941c6e35c6b54fed4c86edb54b16af4094586514b50ea3",
+      "turn": 4
+    }
+  ],
+  "config": {
+    "max_tokens": 1200,
+    "model": "qwen2.5-1.5b-instruct-q4_k_m",
+    "prompt_sha256": "edc0b9156fd109af059948adc3d59b2c1e123e28c73fc5143af925dc592d0e46",
+    "prompt_version": "batched-turns-v5",
+    "revision": "91cad51170dc346986eccefdc2dd33a9da36ead9",
+    "seed": 4242,
+    "temperature": 0.4
+  },
+  "payload_sha256": "9b91802501c445c49f21f00d39084f4cfa7d3ee694e20d5405243914bdd90868",
+  "plan": {
+    "channel": "chat",
+    "conversation_id": "b74f558ffc57e99bf764f4cf",
+    "style": "natural and concise",
+    "turns": [
+      {
+        "acts": [
+          "identity_claim",
+          "troubleshooting"
+        ],
+        "event_time": null,
+        "index": 1,
+        "record_id": "28d97125fd353f41c9699468",
+        "required_literals": [
+          "Noel Chen"
+        ],
+        "speaker": "caller",
+        "stage": "vpn_open",
+        "template_text": "Hi, I'm Noel Chen. I cannot connect to the VPN from my work computer."
+      },
+      {
+        "acts": [
+          "troubleshooting"
+        ],
+        "event_time": null,
+        "index": 2,
+        "record_id": "191b73e83ede9ffa0ee8ad10",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "vpn_steps",
+        "template_text": "Please disconnect the VPN, restart its client, and check the connection."
+      },
+      {
+        "acts": [
+          "closing"
+        ],
+        "event_time": null,
+        "index": 3,
+        "record_id": "508ed54e44317829bafab9ab",
+        "required_literals": [],
+        "speaker": "caller",
+        "stage": "vpn_fixed",
+        "template_text": "The VPN connects now, thank you."
+      },
+      {
+        "acts": [
+          "closing"
+        ],
+        "event_time": null,
+        "index": 4,
+        "record_id": "43040369988c8e631605f154",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "close",
+        "template_text": "I will close the ticket with the outcome recorded. Thanks."
+      }
+    ],
+    "user": "noel.chen"
+  },
+  "review": "automated validation; no independent human review",
+  "status": "validated",
+  "texts": [
+    "Hi, I'm Noel Chen. I cannot connect to the VPN from my work computer.",
+    "Please disconnect the VPN, restart its client, and check the connection.",
+    "The VPN connects now, thank you.",
+    "I will close the ticket with the outcome recorded. Thanks."
+  ]
+}

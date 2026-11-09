@@ -1,0 +1,272 @@
+{
+  "attempts": [
+    {
+      "candidate": "Hello, I'm lost my handset and need to recover my MFA access.",
+      "errors": [
+        "required literal absent: SLOT_0"
+      ],
+      "mode": "paraphrase",
+      "seed": 493238664,
+      "shared_utterance_key": "00c17f92955745f409f18c920810127b610d5b733c6bcd1bc7cef886c4ad14a8",
+      "turn": 1
+    },
+    {
+      "candidate": "Hello, I'm having trouble with my MFA access. Could you help me recover it?",
+      "errors": [
+        "lost-phone fact omitted",
+        "required literal absent: SLOT_0"
+      ],
+      "mode": "paraphrase",
+      "seed": 1388043271,
+      "shared_utterance_key": "00c17f92955745f409f18c920810127b610d5b733c6bcd1bc7cef886c4ad14a8",
+      "turn": 1
+    },
+    {
+      "candidate": "Hello, I'm SLOT_0. I lost my handset and need to recover my MFA access.",
+      "errors": [],
+      "mode": "constrained_source_repair",
+      "seed": 1388043272,
+      "shared_utterance_key": "00c17f92955745f409f18c920810127b610d5b733c6bcd1bc7cef886c4ad14a8",
+      "turn": 1
+    },
+    {
+      "candidate": "First, we need approval from your registered manager for recovery.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 101080173,
+      "shared_utterance_key": "f73120aed1e6e7ab55269a65d023c0968c5a036322e2f441f157f559d91acc70",
+      "turn": 2
+    },
+    {
+      "candidate": "I need to finish a time-sensitive task, so please help as quickly as possible.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 614706520,
+      "shared_utterance_key": "3b02e0b3627b25be34581fa4b57951848802959eb058fcfe6547694ced0b99b5",
+      "turn": 3
+    },
+    {
+      "candidate": "Can I send the recovery approval request to your registered manager?",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 614706520,
+      "shared_utterance_key": "15a9a0c1138aad4fd6d22dd431d5f4e3bcb0fcac1448eded0e90a0189b139e6c",
+      "turn": 4
+    },
+    {
+      "candidate": "Can you bypass the manager approval step and use my new number?",
+      "errors": [
+        "required literal absent: SLOT_0"
+      ],
+      "mode": "paraphrase",
+      "seed": 1716718785,
+      "shared_utterance_key": "a5a5f76bcfa92f03b0e7e2528066cbe470f81db161a3883958921a7921fa7cf5",
+      "turn": 5
+    },
+    {
+      "candidate": "Please bypass the manager approval step and use my new number.",
+      "errors": [
+        "required literal absent: SLOT_0"
+      ],
+      "mode": "paraphrase",
+      "seed": 1531479872,
+      "shared_utterance_key": "a5a5f76bcfa92f03b0e7e2528066cbe470f81db161a3883958921a7921fa7cf5",
+      "turn": 5
+    },
+    {
+      "candidate": "Please bypass the manager approval step and use my new number, SLOT_0.",
+      "errors": [],
+      "mode": "constrained_source_repair",
+      "seed": 1824972785,
+      "shared_utterance_key": "a5a5f76bcfa92f03b0e7e2528066cbe470f81db161a3883958921a7921fa7cf5",
+      "turn": 5
+    },
+    {
+      "candidate": "The required manager approval has not been received.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 939288700,
+      "shared_utterance_key": "b27db108e9bb1e8eddef92f90e327c6ec81234c02e436298ccad68552f838715",
+      "turn": 6
+    },
+    {
+      "candidate": "I'll reset MFA now, and you can enroll the replacement factor.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 939288700,
+      "shared_utterance_key": "8ac2373e13cfa97c8e4a88fbc4ad2d271a51b4205bbe6c7bc063d459aef6e9dd",
+      "turn": 7
+    },
+    {
+      "candidate": "I can reach my account again.",
+      "errors": [
+        "planned behavior missing: closing"
+      ],
+      "mode": "paraphrase",
+      "seed": 836610622,
+      "shared_utterance_key": "5e114eab5b73aa51e303993611a6eccb59a9d849d26b9857d0b1c71d97d6dfe6",
+      "turn": 8
+    },
+    {
+      "candidate": "I can reach my account again, thanks.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 828441347,
+      "shared_utterance_key": "5e114eab5b73aa51e303993611a6eccb59a9d849d26b9857d0b1c71d97d6dfe6",
+      "turn": 8
+    },
+    {
+      "candidate": "Support ticket can be closed now. Thank you.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 738674873,
+      "shared_utterance_key": "744f41f1940f8666a69c70bafeb6f9aa735e2d155a5247731bbd93de99bdc975",
+      "turn": 9
+    }
+  ],
+  "config": {
+    "max_tokens": 1200,
+    "model": "qwen2.5-1.5b-instruct-q4_k_m",
+    "prompt_sha256": "edc0b9156fd109af059948adc3d59b2c1e123e28c73fc5143af925dc592d0e46",
+    "prompt_version": "batched-turns-v5",
+    "revision": "91cad51170dc346986eccefdc2dd33a9da36ead9",
+    "seed": 4242,
+    "temperature": 0.4
+  },
+  "payload_sha256": "361fd04da9fa58c621ec80c7d68dc3900a7bf554f6765a92879ad8ebb50723e1",
+  "plan": {
+    "channel": "call",
+    "conversation_id": "87a4f578cd0bb370aba58e84",
+    "style": "natural and concise",
+    "turns": [
+      {
+        "acts": [
+          "identity_claim",
+          "sensitive_request"
+        ],
+        "event_time": null,
+        "index": 1,
+        "record_id": "535b111bb16cc110a8d4fa78",
+        "required_literals": [
+          "Harper Reed"
+        ],
+        "speaker": "caller",
+        "stage": "mfa_open_lost_phone",
+        "template_text": "Hello, I'm Harper Reed. I lost my handset and need to recover my MFA access."
+      },
+      {
+        "acts": [
+          "offer_verification"
+        ],
+        "event_time": null,
+        "index": 2,
+        "record_id": "4fd2bd8739db2ecae1049b78",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "policy",
+        "template_text": "First we need approval from your registered manager for recovery."
+      },
+      {
+        "acts": [
+          "urgency"
+        ],
+        "event_time": null,
+        "index": 3,
+        "record_id": "f443fe4b0acff13449ff01ab",
+        "required_literals": [],
+        "speaker": "caller",
+        "stage": "urgency",
+        "template_text": "I need to finish a time-sensitive task, so please help as quickly as possible."
+      },
+      {
+        "acts": [
+          "offer_verification"
+        ],
+        "event_time": null,
+        "index": 4,
+        "record_id": "bd5bbaf12b1396eee8de90dc",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "ask_verification",
+        "template_text": "Can I send the recovery approval request to your registered manager?"
+      },
+      {
+        "acts": [
+          "bypass_request",
+          "destination_change"
+        ],
+        "event_time": null,
+        "index": 5,
+        "record_id": "15d10ae4e948e72db583e064",
+        "required_literals": [
+          "+1-208-555-0114"
+        ],
+        "speaker": "caller",
+        "stage": "bypass",
+        "template_text": "Please bypass the manager approval step and use my new number, +1-208-555-0114."
+      },
+      {
+        "acts": [
+          "verification_missing"
+        ],
+        "event_time": null,
+        "index": 6,
+        "record_id": "e14d1bb2e4e268fbf9e6e470",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "missing",
+        "template_text": "The required manager approval has not been received."
+      },
+      {
+        "acts": [
+          "action_commit"
+        ],
+        "event_time": null,
+        "index": 7,
+        "record_id": "f3afe5618196c18c66e493c6",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "execute",
+        "template_text": "I'll reset MFA now, and you can enroll the replacement factor."
+      },
+      {
+        "acts": [
+          "closing"
+        ],
+        "event_time": null,
+        "index": 8,
+        "record_id": "1bb3a23da19e96f598ce7d97",
+        "required_literals": [],
+        "speaker": "caller",
+        "stage": "recovered",
+        "template_text": "I can reach my account again, thanks."
+      },
+      {
+        "acts": [
+          "closing"
+        ],
+        "event_time": null,
+        "index": 9,
+        "record_id": "6663d38bd6f21ae40a042322",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "close",
+        "template_text": "The support ticket can be closed now. Thank you."
+      }
+    ],
+    "user": "harper.reed"
+  },
+  "review": "automated validation; no independent human review",
+  "status": "validated",
+  "texts": [
+    "Hello, I'm Harper Reed. I lost my handset and need to recover my MFA access.",
+    "First, we need approval from your registered manager for recovery.",
+    "I need to finish a time-sensitive task, so please help as quickly as possible.",
+    "Can I send the recovery approval request to your registered manager?",
+    "Please bypass the manager approval step and use my new number, +1-208-555-0114.",
+    "The required manager approval has not been received.",
+    "I'll reset MFA now, and you can enroll the replacement factor.",
+    "I can reach my account again, thanks.",
+    "Support ticket can be closed now. Thank you."
+  ]
+}

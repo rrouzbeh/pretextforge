@@ -1,0 +1,261 @@
+{
+  "attempts": [
+    {
+      "candidate": "Hello, this is SLOT_0. I cannot use my missing phone for MFA; could we reset it?",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 1418485267,
+      "shared_utterance_key": "c7b60f55b256f65310d117b574ec6489540ac7a33e22cedb3f154f8f438a8b6e",
+      "turn": 1
+    },
+    {
+      "candidate": "Manager approval is required for this change.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 836610622,
+      "shared_utterance_key": "1da3de0e4cd920397f219f134493962879af66216e53d53a2738477308e604d9",
+      "turn": 2
+    },
+    {
+      "candidate": "Boarding soon; urgent help needed.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 1338112993,
+      "shared_utterance_key": "6332f780942db2c35b64f4d349d1a60f8f7814ffe9535c74bd14e6834b5b96e8",
+      "turn": 3
+    },
+    {
+      "candidate": "I need to verify this with your manager; can I request their approval?",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 614706520,
+      "shared_utterance_key": "bb55ee7f89f2923edaeb33ecbb4023aa9d855bf9666bc0681e26eefca9b4d782",
+      "turn": 4
+    },
+    {
+      "candidate": "Could we skip manager approval and use phone number SLOT_0 for the replacement factor?",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 614706520,
+      "shared_utterance_key": "adb2d0fa9d078216134f20460589b229559220b61bb23e4d8e9ebdc1c054d433",
+      "turn": 5
+    },
+    {
+      "candidate": "Manager's approval isn't on this ticket.",
+      "errors": [
+        "planned behavior missing: verification_missing"
+      ],
+      "mode": "paraphrase",
+      "seed": 528649829,
+      "shared_utterance_key": "f480ad551f4bb8729154ffe1e9c90db6a2c531d4324b486e585e964be70e1984",
+      "turn": 6
+    },
+    {
+      "candidate": "Manager approval not recorded on ticket.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 528649830,
+      "shared_utterance_key": "f480ad551f4bb8729154ffe1e9c90db6a2c531d4324b486e585e964be70e1984",
+      "turn": 6
+    },
+    {
+      "candidate": "I will reset MFA before adding replacement factor.",
+      "errors": [
+        "caller enrollment instruction omitted or actor changed"
+      ],
+      "mode": "paraphrase",
+      "seed": 1338112993,
+      "shared_utterance_key": "69758083bddf0df0715fe2e54ccc20e7467523541eeff5dee3dfc9c9df82eca0",
+      "turn": 7
+    },
+    {
+      "candidate": "I will reset MFA now. Add your replacement factor next.",
+      "errors": [
+        "caller enrollment instruction omitted or actor changed"
+      ],
+      "mode": "paraphrase",
+      "seed": 1559260824,
+      "shared_utterance_key": "69758083bddf0df0715fe2e54ccc20e7467523541eeff5dee3dfc9c9df82eca0",
+      "turn": 7
+    },
+    {
+      "candidate": "I will now reset MFA before you add your replacement factor.",
+      "errors": [],
+      "mode": "constrained_source_repair",
+      "seed": 1559260825,
+      "shared_utterance_key": "69758083bddf0df0715fe2e54ccc20e7467523541eeff5dee3dfc9c9df82eca0",
+      "turn": 7
+    },
+    {
+      "candidate": "I can reach my account again.",
+      "errors": [
+        "planned behavior missing: closing"
+      ],
+      "mode": "paraphrase",
+      "seed": 836610622,
+      "shared_utterance_key": "5e114eab5b73aa51e303993611a6eccb59a9d849d26b9857d0b1c71d97d6dfe6",
+      "turn": 8
+    },
+    {
+      "candidate": "I can reach my account again, thanks.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 828441347,
+      "shared_utterance_key": "5e114eab5b73aa51e303993611a6eccb59a9d849d26b9857d0b1c71d97d6dfe6",
+      "turn": 8
+    },
+    {
+      "candidate": "I will close this ticket. Thank you for contacting support.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 493238664,
+      "shared_utterance_key": "b2e30b771be95ad433fc51c985d1603f167a7c5a126f36ab9f4bd52628ed44c9",
+      "turn": 9
+    }
+  ],
+  "config": {
+    "max_tokens": 1200,
+    "model": "qwen2.5-1.5b-instruct-q4_k_m",
+    "prompt_sha256": "edc0b9156fd109af059948adc3d59b2c1e123e28c73fc5143af925dc592d0e46",
+    "prompt_version": "batched-turns-v5",
+    "revision": "91cad51170dc346986eccefdc2dd33a9da36ead9",
+    "seed": 4242,
+    "temperature": 0.4
+  },
+  "payload_sha256": "49ee8bfdbb2a17ea9929268c0973994a86d226bdd65af3e5ed1f70a387b14a89",
+  "plan": {
+    "channel": "call",
+    "conversation_id": "e3a3f45ad363f56ac459c7f1",
+    "style": "natural and concise",
+    "turns": [
+      {
+        "acts": [
+          "identity_claim",
+          "sensitive_request"
+        ],
+        "event_time": null,
+        "index": 1,
+        "record_id": "785203e773f553c30d257746",
+        "required_literals": [
+          "Harper Brooks"
+        ],
+        "speaker": "caller",
+        "stage": "mfa_open_lost_phone",
+        "template_text": "Hello, this is Harper Brooks. I cannot use my missing phone for MFA; could we reset it?"
+      },
+      {
+        "acts": [
+          "offer_verification"
+        ],
+        "event_time": null,
+        "index": 2,
+        "record_id": "bdcb3b69538cc248ca7c6b89",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "policy",
+        "template_text": "I can assist, but manager approval is required for this change."
+      },
+      {
+        "acts": [
+          "urgency"
+        ],
+        "event_time": null,
+        "index": 3,
+        "record_id": "2af92e80c372e69cac675674",
+        "required_literals": [],
+        "speaker": "caller",
+        "stage": "urgency",
+        "template_text": "I am boarding soon and would appreciate urgent help."
+      },
+      {
+        "acts": [
+          "offer_verification"
+        ],
+        "event_time": null,
+        "index": 4,
+        "record_id": "2974fc7663582353e8d6b0ea",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "ask_verification",
+        "template_text": "I need to verify this with your manager; can I request their approval?"
+      },
+      {
+        "acts": [
+          "bypass_request",
+          "destination_change"
+        ],
+        "event_time": null,
+        "index": 5,
+        "record_id": "89181df78e13909afe2f7943",
+        "required_literals": [
+          "+1-208-555-0108"
+        ],
+        "speaker": "caller",
+        "stage": "bypass",
+        "template_text": "Could we skip manager approval and use phone number +1-208-555-0108 for the replacement factor?"
+      },
+      {
+        "acts": [
+          "verification_missing"
+        ],
+        "event_time": null,
+        "index": 6,
+        "record_id": "36f26bbfdcb0e91fd4e94f96",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "missing",
+        "template_text": "Manager approval has not been recorded on this ticket."
+      },
+      {
+        "acts": [
+          "action_commit"
+        ],
+        "event_time": null,
+        "index": 7,
+        "record_id": "af6e4f6d5a4b83d85e5ea9ae",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "execute",
+        "template_text": "I will now reset MFA before you add your replacement factor."
+      },
+      {
+        "acts": [
+          "closing"
+        ],
+        "event_time": null,
+        "index": 8,
+        "record_id": "de2273f7802518fcb0aa4816",
+        "required_literals": [],
+        "speaker": "caller",
+        "stage": "recovered",
+        "template_text": "I can reach my account again, thanks."
+      },
+      {
+        "acts": [
+          "closing"
+        ],
+        "event_time": null,
+        "index": 9,
+        "record_id": "87686d3628d7da0db53bf8d3",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "close",
+        "template_text": "I will close this ticket. Thank you for contacting support."
+      }
+    ],
+    "user": "harper.brooks"
+  },
+  "review": "automated validation; no independent human review",
+  "status": "validated",
+  "texts": [
+    "Hello, this is Harper Brooks. I cannot use my missing phone for MFA; could we reset it?",
+    "Manager approval is required for this change.",
+    "Boarding soon; urgent help needed.",
+    "I need to verify this with your manager; can I request their approval?",
+    "Could we skip manager approval and use phone number +1-208-555-0108 for the replacement factor?",
+    "Manager approval not recorded on ticket.",
+    "I will now reset MFA before you add your replacement factor.",
+    "I can reach my account again, thanks.",
+    "I will close this ticket. Thank you for contacting support."
+  ]
+}

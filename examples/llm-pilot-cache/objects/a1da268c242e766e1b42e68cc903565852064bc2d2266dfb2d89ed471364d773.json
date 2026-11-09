@@ -1,0 +1,200 @@
+{
+  "attempts": [
+    {
+      "candidate": "My name is SLOT_0. Could you reset MFA? I cannot find my phone.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 107305370,
+      "shared_utterance_key": "bee1264a77d4cd376ac0434f17a1804c9fb9a674556afc57c586fc75034d6ece",
+      "turn": 1
+    },
+    {
+      "candidate": "For account recovery, manager approval is needed through the ticket.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 1437311383,
+      "shared_utterance_key": "bdb91695ba04a37e40c7555ffad5e3512eec028e68d3ca524982acaa1ee37950",
+      "turn": 2
+    },
+    {
+      "candidate": "Yes, ask the registered manager to approve it. My new phone number is SLOT_0.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 107305370,
+      "shared_utterance_key": "bf17e484181812db1776f4f911445b617fa29788d9ca43fad8a030457f3e3e96",
+      "turn": 3
+    },
+    {
+      "candidate": "I am submitting this recovery for manager approval.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 107305370,
+      "shared_utterance_key": "9e41d905cb7ea571c9cb0e62b1e7ccf118077a6a2f3456525c59351325bea6fc",
+      "turn": 4
+    },
+    {
+      "candidate": "The recovery approval from your manager is now recorded.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 1437311383,
+      "shared_utterance_key": "21bb9c4aeebcf265de4a071434c90401bbeff2cbacd5a74ceba43c29f4846f4f",
+      "turn": 5
+    },
+    {
+      "candidate": "I'll reset your MFA, then you can register the replacement.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 107305370,
+      "shared_utterance_key": "d07ad59121f1bb6c09f21ee09255e0ad3926c3943c04723bb7f54cdd1dc3d958",
+      "turn": 6
+    },
+    {
+      "candidate": "I can sign in again now, thank you.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 107305370,
+      "shared_utterance_key": "25f18ac2dacf4537a7adda7baaf23866c11d116aa9344071f912429674f57243",
+      "turn": 7
+    },
+    {
+      "candidate": "Thank you for the update. This support ticket will be closed.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 605831863,
+      "shared_utterance_key": "8da2fae9b1e3a95fc09a52dba4ba1ab4592f88b527fed4b289d0713010d521fb",
+      "turn": 8
+    }
+  ],
+  "config": {
+    "max_tokens": 1200,
+    "model": "qwen2.5-1.5b-instruct-q4_k_m",
+    "prompt_sha256": "edc0b9156fd109af059948adc3d59b2c1e123e28c73fc5143af925dc592d0e46",
+    "prompt_version": "batched-turns-v5",
+    "revision": "91cad51170dc346986eccefdc2dd33a9da36ead9",
+    "seed": 4242,
+    "temperature": 0.4
+  },
+  "payload_sha256": "5c66520f1597c64348b3cc41d2ac3f0860502a8f115533cb7160470421eb3702",
+  "plan": {
+    "channel": "chat",
+    "conversation_id": "a8220051d404d27ab943f0b9",
+    "style": "natural and concise",
+    "turns": [
+      {
+        "acts": [
+          "identity_claim",
+          "sensitive_request"
+        ],
+        "event_time": null,
+        "index": 1,
+        "record_id": "0deefdb436dcc1cdc72bd654",
+        "required_literals": [
+          "Avery Kim"
+        ],
+        "speaker": "caller",
+        "stage": "mfa_open_lost_phone",
+        "template_text": "My name is Avery Kim. Could you reset MFA? I cannot find my phone."
+      },
+      {
+        "acts": [
+          "offer_verification"
+        ],
+        "event_time": null,
+        "index": 2,
+        "record_id": "308776d2cb6bda9ee6962601",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "policy",
+        "template_text": "For account recovery I must obtain manager approval through the ticket."
+      },
+      {
+        "acts": [
+          "accept_verification",
+          "destination_change"
+        ],
+        "event_time": null,
+        "index": 3,
+        "record_id": "8ccdceeb8c8d6dd668c0298a",
+        "required_literals": [
+          "+1-208-555-0110"
+        ],
+        "speaker": "caller",
+        "stage": "accept",
+        "template_text": "Yes, ask the registered manager to approve it. My new phone number is +1-208-555-0110."
+      },
+      {
+        "acts": [
+          "offer_verification"
+        ],
+        "event_time": null,
+        "index": 4,
+        "record_id": "e87896666d9621bb64585097",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "request_approval",
+        "template_text": "I am submitting this recovery for manager approval."
+      },
+      {
+        "acts": [
+          "approval_claim"
+        ],
+        "event_time": null,
+        "index": 5,
+        "record_id": "443872cfa48a48a018df4f66",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "approval",
+        "template_text": "The recovery approval from your manager is now recorded."
+      },
+      {
+        "acts": [
+          "action_commit"
+        ],
+        "event_time": null,
+        "index": 6,
+        "record_id": "40814e103929a73c57df3d5b",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "execute",
+        "template_text": "I'll reset your MFA, then you can register the replacement."
+      },
+      {
+        "acts": [
+          "closing"
+        ],
+        "event_time": null,
+        "index": 7,
+        "record_id": "b69e96419e1cf5cd7ab76cb9",
+        "required_literals": [],
+        "speaker": "caller",
+        "stage": "recovered",
+        "template_text": "I can sign in again now, thank you."
+      },
+      {
+        "acts": [
+          "closing"
+        ],
+        "event_time": null,
+        "index": 8,
+        "record_id": "721d1b6353517befc8d68583",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "close",
+        "template_text": "Thank you for the update. This support ticket will be closed."
+      }
+    ],
+    "user": "avery.kim"
+  },
+  "review": "automated validation; no independent human review",
+  "status": "validated",
+  "texts": [
+    "My name is Avery Kim. Could you reset MFA? I cannot find my phone.",
+    "For account recovery, manager approval is needed through the ticket.",
+    "Yes, ask the registered manager to approve it. My new phone number is +1-208-555-0110.",
+    "I am submitting this recovery for manager approval.",
+    "The recovery approval from your manager is now recorded.",
+    "I'll reset your MFA, then you can register the replacement.",
+    "I can sign in again now, thank you.",
+    "Thank you for the update. This support ticket will be closed."
+  ]
+}

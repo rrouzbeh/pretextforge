@@ -1,0 +1,251 @@
+{
+  "attempts": [
+    {
+      "candidate": "I'm lost. My phone is missing and I need an MFA reset.",
+      "errors": [
+        "required literal absent: SLOT_0"
+      ],
+      "mode": "paraphrase",
+      "seed": 1437311383,
+      "shared_utterance_key": "e9662d53bb6a9d06851bcb5655fe840c98fd8f300283ccf270dbe313bb0d625a",
+      "turn": 1
+    },
+    {
+      "candidate": "My phone is lost. I need an MFA reset.",
+      "errors": [
+        "required literal absent: SLOT_0",
+        "planned behavior missing: identity_claim"
+      ],
+      "mode": "paraphrase",
+      "seed": 1226052733,
+      "shared_utterance_key": "e9662d53bb6a9d06851bcb5655fe840c98fd8f300283ccf270dbe313bb0d625a",
+      "turn": 1
+    },
+    {
+      "candidate": "I'm SLOT_0, calling because my phone is lost. I need an MFA reset.",
+      "errors": [],
+      "mode": "constrained_source_repair",
+      "seed": 1226052734,
+      "shared_utterance_key": "e9662d53bb6a9d06851bcb5655fe840c98fd8f300283ccf270dbe313bb0d625a",
+      "turn": 1
+    },
+    {
+      "candidate": "I can help with recovery. We need approval from your manager of record first.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 2131768677,
+      "shared_utterance_key": "47b4b95fb8b31d1eba8ef96d2a1b31b29611d6c37aeb143b8bf980327459d8c5",
+      "turn": 2
+    },
+    {
+      "candidate": "My colleague is waiting for my work, and I'm in a hurry.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 646455728,
+      "shared_utterance_key": "3df6b4985b3dfdc48a697222c803c9ed9aac7472de4dbd3353db3bf13f12d6ed",
+      "turn": 3
+    },
+    {
+      "candidate": "Should I ask your manager to approve the recovery?",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 849076198,
+      "shared_utterance_key": "281dbc4a2fca457c5193b9ddcb2cc79a79ed03a60ba52d7965f5096194c09023",
+      "turn": 4
+    },
+    {
+      "candidate": "My replacement handset uses it.",
+      "errors": [
+        "required literal absent: SLOT_0"
+      ],
+      "mode": "paraphrase",
+      "seed": 849076198,
+      "shared_utterance_key": "89d22e6ef01aba13dbe6b3583af3efba9e17ad6762671308d5b01a07cd43d50f",
+      "turn": 5
+    },
+    {
+      "candidate": "My replacement handset uses SLOT_0.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 1844255119,
+      "shared_utterance_key": "89d22e6ef01aba13dbe6b3583af3efba9e17ad6762671308d5b01a07cd43d50f",
+      "turn": 5
+    },
+    {
+      "candidate": "Manager approval is pending and has not been recorded.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 646455728,
+      "shared_utterance_key": "c955f3339aa60e9ad3e31f3aedd8a09d8338791b057e6d3bf91c3ef3c0c18266",
+      "turn": 6
+    },
+    {
+      "candidate": "The reset will remain on hold until approval is available.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 849076198,
+      "shared_utterance_key": "00080a1525445c0833cddfc0e7917271e1f64def5d0a85f7f51dab80544eea89",
+      "turn": 7
+    },
+    {
+      "candidate": "Okay, thank you. I'll follow up with my manager.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 646455728,
+      "shared_utterance_key": "14e09d778e84d3fc586bb7d19c83493538ef810a35f9041244ff9d2b74f2e80b",
+      "turn": 8
+    },
+    {
+      "candidate": "I will close the ticket with the outcome recorded. Thanks.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 1903008642,
+      "shared_utterance_key": "290e1bb6dc75e1db5d941c6e35c6b54fed4c86edb54b16af4094586514b50ea3",
+      "turn": 9
+    }
+  ],
+  "config": {
+    "max_tokens": 1200,
+    "model": "qwen2.5-1.5b-instruct-q4_k_m",
+    "prompt_sha256": "edc0b9156fd109af059948adc3d59b2c1e123e28c73fc5143af925dc592d0e46",
+    "prompt_version": "batched-turns-v5",
+    "revision": "91cad51170dc346986eccefdc2dd33a9da36ead9",
+    "seed": 4242,
+    "temperature": 0.4
+  },
+  "payload_sha256": "54f6f4fbca26957e0defa007449222ef99793f6b6dcf31d638b95e5d67bdf191",
+  "plan": {
+    "channel": "chat",
+    "conversation_id": "0447d694753d11d084fe698f",
+    "style": "natural and concise",
+    "turns": [
+      {
+        "acts": [
+          "identity_claim",
+          "sensitive_request"
+        ],
+        "event_time": null,
+        "index": 1,
+        "record_id": "40c986098b2cd0fcffc09af6",
+        "required_literals": [
+          "Harper Ortiz"
+        ],
+        "speaker": "caller",
+        "stage": "mfa_open_lost_phone",
+        "template_text": "I'm Harper Ortiz, calling because my phone is lost. I need an MFA reset."
+      },
+      {
+        "acts": [
+          "offer_verification"
+        ],
+        "event_time": null,
+        "index": 2,
+        "record_id": "a86de01ea1dc37da73fb39c0",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "policy",
+        "template_text": "I can help with recovery. We need approval from your manager of record first."
+      },
+      {
+        "acts": [
+          "urgency"
+        ],
+        "event_time": null,
+        "index": 3,
+        "record_id": "3e65348554d1891ba11a99e1",
+        "required_literals": [],
+        "speaker": "caller",
+        "stage": "urgency",
+        "template_text": "A colleague is waiting for my work and I am in a hurry."
+      },
+      {
+        "acts": [
+          "offer_verification"
+        ],
+        "event_time": null,
+        "index": 4,
+        "record_id": "798fb7c744afb3131e3417c9",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "ask_verification",
+        "template_text": "Shall I ask your manager of record to approve the recovery?"
+      },
+      {
+        "acts": [
+          "destination_change"
+        ],
+        "event_time": null,
+        "index": 5,
+        "record_id": "f812c7dfe1a48ce788fb590f",
+        "required_literals": [
+          "+1-208-555-0105"
+        ],
+        "speaker": "caller",
+        "stage": "destination",
+        "template_text": "My replacement handset uses +1-208-555-0105."
+      },
+      {
+        "acts": [
+          "verification_missing"
+        ],
+        "event_time": null,
+        "index": 6,
+        "record_id": "6c086c9c3853648c41591444",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "missing",
+        "template_text": "Manager approval is pending and has not been recorded."
+      },
+      {
+        "acts": [
+          "action_hold"
+        ],
+        "event_time": null,
+        "index": 7,
+        "record_id": "b813b25526979fe6e71d144b",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "deny",
+        "template_text": "The reset will remain on hold until the approval is available."
+      },
+      {
+        "acts": [
+          "closing"
+        ],
+        "event_time": null,
+        "index": 8,
+        "record_id": "065a456409e9ed383478f191",
+        "required_literals": [],
+        "speaker": "caller",
+        "stage": "denied_closing",
+        "template_text": "Okay, thank you. I will follow up with my manager."
+      },
+      {
+        "acts": [
+          "closing"
+        ],
+        "event_time": null,
+        "index": 9,
+        "record_id": "2a5dfe9dfbbdd56e429c490d",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "close",
+        "template_text": "I will close the ticket with the outcome recorded. Thanks."
+      }
+    ],
+    "user": "harper.ortiz"
+  },
+  "review": "automated validation; no independent human review",
+  "status": "validated",
+  "texts": [
+    "I'm Harper Ortiz, calling because my phone is lost. I need an MFA reset.",
+    "I can help with recovery. We need approval from your manager of record first.",
+    "My colleague is waiting for my work, and I'm in a hurry.",
+    "Should I ask your manager to approve the recovery?",
+    "My replacement handset uses +1-208-555-0105.",
+    "Manager approval is pending and has not been recorded.",
+    "The reset will remain on hold until approval is available.",
+    "Okay, thank you. I'll follow up with my manager.",
+    "I will close the ticket with the outcome recorded. Thanks."
+  ]
+}

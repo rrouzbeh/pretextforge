@@ -1,0 +1,113 @@
+{
+  "attempts": [
+    {
+      "candidate": "Hello, this is SLOT_0. The VPN application has a connection error.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 897831859,
+      "shared_utterance_key": "e67d6899cbd786ed375840ae29bf565ecacec216cf42fea6421a8163cee719b4",
+      "turn": 1
+    },
+    {
+      "candidate": "Please restart your VPN client before attempting the connection again.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 1903008642,
+      "shared_utterance_key": "3f28fe9c8ef82d94d516ccbe83c8d3fa22148a0a7e5e4224b5900a372dfb540b",
+      "turn": 2
+    },
+    {
+      "candidate": "It is working now; thanks for your help.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 1903008642,
+      "shared_utterance_key": "9fd01726a4e437ea3eb0188461ccd61267fa4099234160ebae1a295c19dd0628",
+      "turn": 3
+    },
+    {
+      "candidate": "I will close this ticket. Thank you for contacting support.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 493238664,
+      "shared_utterance_key": "b2e30b771be95ad433fc51c985d1603f167a7c5a126f36ab9f4bd52628ed44c9",
+      "turn": 4
+    }
+  ],
+  "config": {
+    "max_tokens": 1200,
+    "model": "qwen2.5-1.5b-instruct-q4_k_m",
+    "prompt_sha256": "edc0b9156fd109af059948adc3d59b2c1e123e28c73fc5143af925dc592d0e46",
+    "prompt_version": "batched-turns-v5",
+    "revision": "91cad51170dc346986eccefdc2dd33a9da36ead9",
+    "seed": 4242,
+    "temperature": 0.4
+  },
+  "payload_sha256": "a7339bccfada399bafc71d2f9ebe837d55d7ab7454626a83c7ab09c419dea3ba",
+  "plan": {
+    "channel": "call",
+    "conversation_id": "4617a681f2f8fcbe40f9eb2f",
+    "style": "natural and concise",
+    "turns": [
+      {
+        "acts": [
+          "identity_claim",
+          "troubleshooting"
+        ],
+        "event_time": null,
+        "index": 1,
+        "record_id": "1d8c2e02337e05b7aa4764f5",
+        "required_literals": [
+          "Dakota Hill"
+        ],
+        "speaker": "caller",
+        "stage": "vpn_open",
+        "template_text": "Hello, this is Dakota Hill. The VPN application is showing a connection error."
+      },
+      {
+        "acts": [
+          "troubleshooting"
+        ],
+        "event_time": null,
+        "index": 2,
+        "record_id": "cf1698247ca6e0dada0bd7f5",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "vpn_steps",
+        "template_text": "Please restart your VPN client before attempting the connection again."
+      },
+      {
+        "acts": [
+          "closing"
+        ],
+        "event_time": null,
+        "index": 3,
+        "record_id": "1e2dd8a7684a82746f6bd88d",
+        "required_literals": [],
+        "speaker": "caller",
+        "stage": "vpn_fixed",
+        "template_text": "It is working again; thanks for your help."
+      },
+      {
+        "acts": [
+          "closing"
+        ],
+        "event_time": null,
+        "index": 4,
+        "record_id": "159f7cdf989b10ee10615e24",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "close",
+        "template_text": "I will close this ticket. Thank you for contacting support."
+      }
+    ],
+    "user": "dakota.hill"
+  },
+  "review": "automated validation; no independent human review",
+  "status": "validated",
+  "texts": [
+    "Hello, this is Dakota Hill. The VPN application has a connection error.",
+    "Please restart your VPN client before attempting the connection again.",
+    "It is working now; thanks for your help.",
+    "I will close this ticket. Thank you for contacting support."
+  ]
+}

@@ -1,0 +1,262 @@
+{
+  "attempts": [
+    {
+      "candidate": "This is my phone. It was left behind; can you help reset my MFA?",
+      "errors": [
+        "required literal absent: SLOT_0"
+      ],
+      "mode": "paraphrase",
+      "seed": 939288700,
+      "shared_utterance_key": "9675905e013884cdd73107da0d4822be7e73321a316ccb6897282bbf7c3a2f9a",
+      "turn": 1
+    },
+    {
+      "candidate": "This is my phone. It was left behind; can you help reset my MFA?",
+      "errors": [
+        "required literal absent: SLOT_0"
+      ],
+      "mode": "paraphrase",
+      "seed": 846292660,
+      "shared_utterance_key": "9675905e013884cdd73107da0d4822be7e73321a316ccb6897282bbf7c3a2f9a",
+      "turn": 1
+    },
+    {
+      "candidate": "This is SLOT_0. My phone was left behind; can you help reset my MFA?",
+      "errors": [],
+      "mode": "constrained_source_repair",
+      "seed": 846292661,
+      "shared_utterance_key": "9675905e013884cdd73107da0d4822be7e73321a316ccb6897282bbf7c3a2f9a",
+      "turn": 1
+    },
+    {
+      "candidate": "For account recovery, manager approval is needed through the ticket.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 1437311383,
+      "shared_utterance_key": "bdb91695ba04a37e40c7555ffad5e3512eec028e68d3ca524982acaa1ee37950",
+      "turn": 2
+    },
+    {
+      "candidate": "There's a deadline this afternoon and I need access soon.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 939288700,
+      "shared_utterance_key": "b9e54d4822055941ebf10b1e03bf9ce9e331c3e25266462585018570bed074d5",
+      "turn": 3
+    },
+    {
+      "candidate": "Can we get approval from the manager listed on your account?",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 939288700,
+      "shared_utterance_key": "18d7943be85ba42f261d8e86dca21316d2f83ac5b96ae00e3045f25811449c46",
+      "turn": 4
+    },
+    {
+      "candidate": "Can we bypass manager approval and use phone number 123-456-7890?",
+      "errors": [
+        "required literal absent: SLOT_0",
+        "invented phone/number"
+      ],
+      "mode": "paraphrase",
+      "seed": 939288700,
+      "shared_utterance_key": "c1cc7903bbf2a04fd6d431447ec83393d70064170c127303dd6e5180349e39f5",
+      "turn": 5
+    },
+    {
+      "candidate": "Can we bypass manager approval and use the phone number I provided?",
+      "errors": [
+        "required literal absent: SLOT_0"
+      ],
+      "mode": "paraphrase",
+      "seed": 846292660,
+      "shared_utterance_key": "c1cc7903bbf2a04fd6d431447ec83393d70064170c127303dd6e5180349e39f5",
+      "turn": 5
+    },
+    {
+      "candidate": "Can we bypass manager approval and use phone number SLOT_0?",
+      "errors": [],
+      "mode": "constrained_source_repair",
+      "seed": 846292661,
+      "shared_utterance_key": "c1cc7903bbf2a04fd6d431447ec83393d70064170c127303dd6e5180349e39f5",
+      "turn": 5
+    },
+    {
+      "candidate": "The required manager approval has not been received.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 939288700,
+      "shared_utterance_key": "b27db108e9bb1e8eddef92f90e327c6ec81234c02e436298ccad68552f838715",
+      "turn": 6
+    },
+    {
+      "candidate": "I'll reset MFA now, and you can enroll the replacement factor.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 939288700,
+      "shared_utterance_key": "8ac2373e13cfa97c8e4a88fbc4ad2d271a51b4205bbe6c7bc063d459aef6e9dd",
+      "turn": 7
+    },
+    {
+      "candidate": "I have logged in successfully now, thank you.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 939288700,
+      "shared_utterance_key": "f0c2850a5f98febce6f67b8f816a9e2f055ce136b3c9579943cd6fe592a2e59b",
+      "turn": 8
+    },
+    {
+      "candidate": "I will close this ticket. Thank you for contacting support.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 493238664,
+      "shared_utterance_key": "b2e30b771be95ad433fc51c985d1603f167a7c5a126f36ab9f4bd52628ed44c9",
+      "turn": 9
+    }
+  ],
+  "config": {
+    "max_tokens": 1200,
+    "model": "qwen2.5-1.5b-instruct-q4_k_m",
+    "prompt_sha256": "edc0b9156fd109af059948adc3d59b2c1e123e28c73fc5143af925dc592d0e46",
+    "prompt_version": "batched-turns-v5",
+    "revision": "91cad51170dc346986eccefdc2dd33a9da36ead9",
+    "seed": 4242,
+    "temperature": 0.4
+  },
+  "payload_sha256": "c80efbf97580ab391a71fe8a7a0e5ff1499c03555daa3ae263937de871146380",
+  "plan": {
+    "channel": "call",
+    "conversation_id": "059d3d6ff30a850b9ca1791e",
+    "style": "natural and concise",
+    "turns": [
+      {
+        "acts": [
+          "identity_claim",
+          "sensitive_request"
+        ],
+        "event_time": null,
+        "index": 1,
+        "record_id": "5ec96c21994ce9331c5f24e0",
+        "required_literals": [
+          "Harper Chen"
+        ],
+        "speaker": "caller",
+        "stage": "mfa_open_lost_phone",
+        "template_text": "This is Harper Chen. My phone was left behind; can you help reset my MFA?"
+      },
+      {
+        "acts": [
+          "offer_verification"
+        ],
+        "event_time": null,
+        "index": 2,
+        "record_id": "2d9963453fbbee6800ccb485",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "policy",
+        "template_text": "For account recovery I must obtain manager approval through the ticket."
+      },
+      {
+        "acts": [
+          "urgency"
+        ],
+        "event_time": null,
+        "index": 3,
+        "record_id": "980220616d217a6c69241f8a",
+        "required_literals": [],
+        "speaker": "caller",
+        "stage": "urgency",
+        "template_text": "There is a deadline this afternoon and I need access soon."
+      },
+      {
+        "acts": [
+          "offer_verification"
+        ],
+        "event_time": null,
+        "index": 4,
+        "record_id": "a0c6a6573d21e8666ec01861",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "ask_verification",
+        "template_text": "Can we get approval from the manager listed on your account?"
+      },
+      {
+        "acts": [
+          "bypass_request",
+          "destination_change"
+        ],
+        "event_time": null,
+        "index": 5,
+        "record_id": "2bf5f4cab1aa69b3e545a445",
+        "required_literals": [
+          "+1-208-555-0102"
+        ],
+        "speaker": "caller",
+        "stage": "bypass",
+        "template_text": "Can we bypass manager approval and use phone number +1-208-555-0102?"
+      },
+      {
+        "acts": [
+          "verification_missing"
+        ],
+        "event_time": null,
+        "index": 6,
+        "record_id": "230e8c22f0e782c61742fc8a",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "missing",
+        "template_text": "The required manager approval has not been received."
+      },
+      {
+        "acts": [
+          "action_commit"
+        ],
+        "event_time": null,
+        "index": 7,
+        "record_id": "b1ccca3f8f65590bd6f8cb24",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "execute",
+        "template_text": "I'll reset MFA now, and you can enroll the replacement factor."
+      },
+      {
+        "acts": [
+          "closing"
+        ],
+        "event_time": null,
+        "index": 8,
+        "record_id": "9fb2d53b4c9679e372fa9386",
+        "required_literals": [],
+        "speaker": "caller",
+        "stage": "recovered",
+        "template_text": "I have logged in successfully now, thank you."
+      },
+      {
+        "acts": [
+          "closing"
+        ],
+        "event_time": null,
+        "index": 9,
+        "record_id": "ac8e32cba053233cd201a5ff",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "close",
+        "template_text": "I will close this ticket. Thank you for contacting support."
+      }
+    ],
+    "user": "harper.chen"
+  },
+  "review": "automated validation; no independent human review",
+  "status": "validated",
+  "texts": [
+    "This is Harper Chen. My phone was left behind; can you help reset my MFA?",
+    "For account recovery, manager approval is needed through the ticket.",
+    "There's a deadline this afternoon and I need access soon.",
+    "Can we get approval from the manager listed on your account?",
+    "Can we bypass manager approval and use phone number +1-208-555-0102?",
+    "The required manager approval has not been received.",
+    "I'll reset MFA now, and you can enroll the replacement factor.",
+    "I have logged in successfully now, thank you.",
+    "I will close this ticket. Thank you for contacting support."
+  ]
+}

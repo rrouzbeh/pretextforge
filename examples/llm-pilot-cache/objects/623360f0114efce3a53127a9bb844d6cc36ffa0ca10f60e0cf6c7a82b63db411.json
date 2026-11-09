@@ -1,0 +1,261 @@
+{
+  "attempts": [
+    {
+      "candidate": "Hello, I'm lost my handset and need to recover my MFA access.",
+      "errors": [
+        "required literal absent: SLOT_0"
+      ],
+      "mode": "paraphrase",
+      "seed": 493238664,
+      "shared_utterance_key": "00c17f92955745f409f18c920810127b610d5b733c6bcd1bc7cef886c4ad14a8",
+      "turn": 1
+    },
+    {
+      "candidate": "Hello, I'm having trouble with my MFA access. Could you help me recover it?",
+      "errors": [
+        "lost-phone fact omitted",
+        "required literal absent: SLOT_0"
+      ],
+      "mode": "paraphrase",
+      "seed": 1388043271,
+      "shared_utterance_key": "00c17f92955745f409f18c920810127b610d5b733c6bcd1bc7cef886c4ad14a8",
+      "turn": 1
+    },
+    {
+      "candidate": "Hello, I'm SLOT_0. I lost my handset and need to recover my MFA access.",
+      "errors": [],
+      "mode": "constrained_source_repair",
+      "seed": 1388043272,
+      "shared_utterance_key": "00c17f92955745f409f18c920810127b610d5b733c6bcd1bc7cef886c4ad14a8",
+      "turn": 1
+    },
+    {
+      "candidate": "First, we need approval from your registered manager for recovery.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 101080173,
+      "shared_utterance_key": "f73120aed1e6e7ab55269a65d023c0968c5a036322e2f441f157f559d91acc70",
+      "turn": 2
+    },
+    {
+      "candidate": "There's a deadline this afternoon and I need access soon.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 939288700,
+      "shared_utterance_key": "b9e54d4822055941ebf10b1e03bf9ce9e331c3e25266462585018570bed074d5",
+      "turn": 3
+    },
+    {
+      "candidate": "Can I request manager's approval?",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 1338112993,
+      "shared_utterance_key": "a154f1baf9706f11a696a8ec19825ef0b554319cbe96ca8f38d1ef9b209316e0",
+      "turn": 4
+    },
+    {
+      "candidate": "I need the replacement factor for SLOT_0.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 212861319,
+      "shared_utterance_key": "927a9f61d313b4279b28a9780531d8bda562cbb4dacef17c2db67d42e862079c",
+      "turn": 5
+    },
+    {
+      "candidate": "Manager approval is pending and has not been recorded.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 646455728,
+      "shared_utterance_key": "c955f3339aa60e9ad3e31f3aedd8a09d8338791b057e6d3bf91c3ef3c0c18266",
+      "turn": 6
+    },
+    {
+      "candidate": "I will reset MFA before adding replacement factor.",
+      "errors": [
+        "caller enrollment instruction omitted or actor changed"
+      ],
+      "mode": "paraphrase",
+      "seed": 1338112993,
+      "shared_utterance_key": "69758083bddf0df0715fe2e54ccc20e7467523541eeff5dee3dfc9c9df82eca0",
+      "turn": 7
+    },
+    {
+      "candidate": "I will reset MFA now. Add your replacement factor next.",
+      "errors": [
+        "caller enrollment instruction omitted or actor changed"
+      ],
+      "mode": "paraphrase",
+      "seed": 1559260824,
+      "shared_utterance_key": "69758083bddf0df0715fe2e54ccc20e7467523541eeff5dee3dfc9c9df82eca0",
+      "turn": 7
+    },
+    {
+      "candidate": "I will now reset MFA before you add your replacement factor.",
+      "errors": [],
+      "mode": "constrained_source_repair",
+      "seed": 1559260825,
+      "shared_utterance_key": "69758083bddf0df0715fe2e54ccc20e7467523541eeff5dee3dfc9c9df82eca0",
+      "turn": 7
+    },
+    {
+      "candidate": "Access issue resolved. Thank you.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 1338112993,
+      "shared_utterance_key": "59d552403d8becd359e7e9dbe442a83095bab8c556d5cb94f596e9d355a25b44",
+      "turn": 8
+    },
+    {
+      "candidate": "Thanks, I will close this support request now.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 129218426,
+      "shared_utterance_key": "0a121f6b089f2f7fbf607376522f54f09de8f60f275ddce3f73f10e30dfc0d66",
+      "turn": 9
+    }
+  ],
+  "config": {
+    "max_tokens": 1200,
+    "model": "qwen2.5-1.5b-instruct-q4_k_m",
+    "prompt_sha256": "edc0b9156fd109af059948adc3d59b2c1e123e28c73fc5143af925dc592d0e46",
+    "prompt_version": "batched-turns-v5",
+    "revision": "91cad51170dc346986eccefdc2dd33a9da36ead9",
+    "seed": 4242,
+    "temperature": 0.4
+  },
+  "payload_sha256": "8e4ea6a32d8525248ca6e201bb8956f84d1062d860d29140be56db05b5fd139f",
+  "plan": {
+    "channel": "call",
+    "conversation_id": "46d99982a3ddf8e562dc0ccb",
+    "style": "natural and concise",
+    "turns": [
+      {
+        "acts": [
+          "identity_claim",
+          "sensitive_request"
+        ],
+        "event_time": null,
+        "index": 1,
+        "record_id": "e4443b2c65b1eb2c75943780",
+        "required_literals": [
+          "Avery Brooks"
+        ],
+        "speaker": "caller",
+        "stage": "mfa_open_lost_phone",
+        "template_text": "Hello, I'm Avery Brooks. I lost my handset and need to recover my MFA access."
+      },
+      {
+        "acts": [
+          "offer_verification"
+        ],
+        "event_time": null,
+        "index": 2,
+        "record_id": "340e3800cb50a2a3544872ea",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "policy",
+        "template_text": "First we need approval from your registered manager for recovery."
+      },
+      {
+        "acts": [
+          "urgency"
+        ],
+        "event_time": null,
+        "index": 3,
+        "record_id": "edb78ba08492b3059e5410b1",
+        "required_literals": [],
+        "speaker": "caller",
+        "stage": "urgency",
+        "template_text": "There is a deadline this afternoon and I need access soon."
+      },
+      {
+        "acts": [
+          "offer_verification"
+        ],
+        "event_time": null,
+        "index": 4,
+        "record_id": "14a20a8b6cbf369d1ce5ab62",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "ask_verification",
+        "template_text": "Can I request your manager's approval through our support system?"
+      },
+      {
+        "acts": [
+          "destination_change"
+        ],
+        "event_time": null,
+        "index": 5,
+        "record_id": "89f07203d3107947ddfbbbc0",
+        "required_literals": [
+          "+1-208-555-0106"
+        ],
+        "speaker": "caller",
+        "stage": "destination",
+        "template_text": "I would need the replacement factor on +1-208-555-0106."
+      },
+      {
+        "acts": [
+          "verification_missing"
+        ],
+        "event_time": null,
+        "index": 6,
+        "record_id": "f484fef6cb38adb1a28de492",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "missing",
+        "template_text": "Manager approval is pending and has not been recorded."
+      },
+      {
+        "acts": [
+          "action_commit"
+        ],
+        "event_time": null,
+        "index": 7,
+        "record_id": "33c8061d1eda1ecc071594ee",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "execute",
+        "template_text": "I will now reset MFA before you add your replacement factor."
+      },
+      {
+        "acts": [
+          "closing"
+        ],
+        "event_time": null,
+        "index": 8,
+        "record_id": "db9bb7a4723ac818d3f222d6",
+        "required_literals": [],
+        "speaker": "caller",
+        "stage": "recovered",
+        "template_text": "That resolved the access issue. Thank you."
+      },
+      {
+        "acts": [
+          "closing"
+        ],
+        "event_time": null,
+        "index": 9,
+        "record_id": "c28129d8089a30be5cbd8335",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "close",
+        "template_text": "Thanks, I will close this support request now."
+      }
+    ],
+    "user": "avery.brooks"
+  },
+  "review": "automated validation; no independent human review",
+  "status": "validated",
+  "texts": [
+    "Hello, I'm Avery Brooks. I lost my handset and need to recover my MFA access.",
+    "First, we need approval from your registered manager for recovery.",
+    "There's a deadline this afternoon and I need access soon.",
+    "Can I request manager's approval?",
+    "I need the replacement factor for +1-208-555-0106.",
+    "Manager approval is pending and has not been recorded.",
+    "I will now reset MFA before you add your replacement factor.",
+    "Access issue resolved. Thank you.",
+    "Thanks, I will close this support request now."
+  ]
+}

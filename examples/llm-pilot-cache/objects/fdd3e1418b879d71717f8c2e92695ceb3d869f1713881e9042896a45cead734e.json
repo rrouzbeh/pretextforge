@@ -1,0 +1,113 @@
+{
+  "attempts": [
+    {
+      "candidate": "Hi, this is SLOT_0. My VPN cannot connect this morning.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 687413809,
+      "shared_utterance_key": "a1b3f5b98c313fd10e2eb2c48d3e43ebbfd33835065918030cb30f6df7fa636e",
+      "turn": 1
+    },
+    {
+      "candidate": "Please disconnect the VPN, restart its client, and check the connection.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 1903008642,
+      "shared_utterance_key": "f30399db21eff5866dc83be34d2356679bb2d54b1cea487d55a741ef91e55585",
+      "turn": 2
+    },
+    {
+      "candidate": "The connection works now. Thank you.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 738674873,
+      "shared_utterance_key": "6c6dc1f28881c116bc46d6156859e91d94fddbd1c7007c2bb960a8e1653d0fe2",
+      "turn": 3
+    },
+    {
+      "candidate": "Thanks, I will close this support request now.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 129218426,
+      "shared_utterance_key": "0a121f6b089f2f7fbf607376522f54f09de8f60f275ddce3f73f10e30dfc0d66",
+      "turn": 4
+    }
+  ],
+  "config": {
+    "max_tokens": 1200,
+    "model": "qwen2.5-1.5b-instruct-q4_k_m",
+    "prompt_sha256": "edc0b9156fd109af059948adc3d59b2c1e123e28c73fc5143af925dc592d0e46",
+    "prompt_version": "batched-turns-v5",
+    "revision": "91cad51170dc346986eccefdc2dd33a9da36ead9",
+    "seed": 4242,
+    "temperature": 0.4
+  },
+  "payload_sha256": "15e48c4a8397a9eef7ed67e0d60fe4f1cb8837e167932f30ab63cda14cb11d24",
+  "plan": {
+    "channel": "chat",
+    "conversation_id": "88a6bc0960f4ab194943aa91",
+    "style": "natural and concise",
+    "turns": [
+      {
+        "acts": [
+          "identity_claim",
+          "troubleshooting"
+        ],
+        "event_time": null,
+        "index": 1,
+        "record_id": "0b879a2c24310809c6da1f91",
+        "required_literals": [
+          "Micah Fox"
+        ],
+        "speaker": "caller",
+        "stage": "vpn_open",
+        "template_text": "Hi, this is Micah Fox. My VPN client cannot connect this morning."
+      },
+      {
+        "acts": [
+          "troubleshooting"
+        ],
+        "event_time": null,
+        "index": 2,
+        "record_id": "c5e358347dd490bc19fed3da",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "vpn_steps",
+        "template_text": "Please disconnect the VPN, restart its client, and check the connection."
+      },
+      {
+        "acts": [
+          "closing"
+        ],
+        "event_time": null,
+        "index": 3,
+        "record_id": "0c4773674fe65f359fc819c8",
+        "required_literals": [],
+        "speaker": "caller",
+        "stage": "vpn_fixed",
+        "template_text": "The connection is working now. Thank you."
+      },
+      {
+        "acts": [
+          "closing"
+        ],
+        "event_time": null,
+        "index": 4,
+        "record_id": "2ae3103e1487a3faa17b61a7",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "close",
+        "template_text": "Thanks, I will close this support request now."
+      }
+    ],
+    "user": "micah.fox"
+  },
+  "review": "automated validation; no independent human review",
+  "status": "validated",
+  "texts": [
+    "Hi, this is Micah Fox. My VPN cannot connect this morning.",
+    "Please disconnect the VPN, restart its client, and check the connection.",
+    "The connection works now. Thank you.",
+    "Thanks, I will close this support request now."
+  ]
+}

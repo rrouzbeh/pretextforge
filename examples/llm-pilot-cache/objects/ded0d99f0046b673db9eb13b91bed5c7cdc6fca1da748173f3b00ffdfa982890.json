@@ -1,0 +1,210 @@
+{
+  "attempts": [
+    {
+      "candidate": "Hi, this is SLOT_0. My phone is missing and I need an MFA reset.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 107305370,
+      "shared_utterance_key": "f053e03014894c2c4b62561ed0045eb3f7c6054e1c7c30f28f465eb99b9fe730",
+      "turn": 1
+    },
+    {
+      "candidate": "For account recovery, manager approval is needed through the ticket.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 1437311383,
+      "shared_utterance_key": "bdb91695ba04a37e40c7555ffad5e3512eec028e68d3ca524982acaa1ee37950",
+      "turn": 2
+    },
+    {
+      "candidate": "Would you like me to request manager approval now?",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 605831863,
+      "shared_utterance_key": "2cda179e0bf782a1ad19664164b55c5463d048df93e2729ed3f55e67c986c452",
+      "turn": 3
+    },
+    {
+      "candidate": "I would like to move the factor without manager approval.",
+      "errors": [
+        "required literal absent: SLOT_0"
+      ],
+      "mode": "paraphrase",
+      "seed": 836610622,
+      "shared_utterance_key": "4619ac045890447406ee2e470877ff0d912fda2158b41ea669797d55940aca3b",
+      "turn": 4
+    },
+    {
+      "candidate": "I want to avoid manager approval and move the factor to SLOT_0.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 828441347,
+      "shared_utterance_key": "4619ac045890447406ee2e470877ff0d912fda2158b41ea669797d55940aca3b",
+      "turn": 4
+    },
+    {
+      "candidate": "There is no manager approval recorded for this recovery.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 493238664,
+      "shared_utterance_key": "9c31e0bf341cbf3d9d468f8246ddfa98b2b929a6106b6660d133c91f5454c752",
+      "turn": 5
+    },
+    {
+      "candidate": "I'll reset MFA now, and you can enroll the replacement factor.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 939288700,
+      "shared_utterance_key": "8ac2373e13cfa97c8e4a88fbc4ad2d271a51b4205bbe6c7bc063d459aef6e9dd",
+      "turn": 6
+    },
+    {
+      "candidate": "I can sign in again now, thank you.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 107305370,
+      "shared_utterance_key": "25f18ac2dacf4537a7adda7baaf23866c11d116aa9344071f912429674f57243",
+      "turn": 7
+    },
+    {
+      "candidate": "I will close the ticket with the outcome recorded. Thanks.",
+      "errors": [],
+      "mode": "paraphrase",
+      "seed": 1903008642,
+      "shared_utterance_key": "290e1bb6dc75e1db5d941c6e35c6b54fed4c86edb54b16af4094586514b50ea3",
+      "turn": 8
+    }
+  ],
+  "config": {
+    "max_tokens": 1200,
+    "model": "qwen2.5-1.5b-instruct-q4_k_m",
+    "prompt_sha256": "edc0b9156fd109af059948adc3d59b2c1e123e28c73fc5143af925dc592d0e46",
+    "prompt_version": "batched-turns-v5",
+    "revision": "91cad51170dc346986eccefdc2dd33a9da36ead9",
+    "seed": 4242,
+    "temperature": 0.4
+  },
+  "payload_sha256": "d56e8e55f28fde0b6e7384351f592aaf66bdfd928529570bbbaab472bb23e63d",
+  "plan": {
+    "channel": "chat",
+    "conversation_id": "623e983070fb7750098afc9b",
+    "style": "natural and concise",
+    "turns": [
+      {
+        "acts": [
+          "identity_claim",
+          "sensitive_request"
+        ],
+        "event_time": null,
+        "index": 1,
+        "record_id": "9e27293dab19f562fc78abe0",
+        "required_literals": [
+          "Avery Kim"
+        ],
+        "speaker": "caller",
+        "stage": "mfa_open_lost_phone",
+        "template_text": "Hi, this is Avery Kim. My phone is missing and I need an MFA reset."
+      },
+      {
+        "acts": [
+          "offer_verification"
+        ],
+        "event_time": null,
+        "index": 2,
+        "record_id": "65142e9417e8fe27a28b46ad",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "policy",
+        "template_text": "For account recovery I must obtain manager approval through the ticket."
+      },
+      {
+        "acts": [
+          "offer_verification"
+        ],
+        "event_time": null,
+        "index": 3,
+        "record_id": "e2df107c553626c48df800e7",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "ask_verification",
+        "template_text": "Would you like me to request manager approval now?"
+      },
+      {
+        "acts": [
+          "bypass_request",
+          "destination_change"
+        ],
+        "event_time": null,
+        "index": 4,
+        "record_id": "d3209e11446a9dfac1fa3a31",
+        "required_literals": [
+          "+1-208-555-0109"
+        ],
+        "speaker": "caller",
+        "stage": "bypass",
+        "template_text": "I would like to avoid manager approval and move the factor to +1-208-555-0109."
+      },
+      {
+        "acts": [
+          "verification_missing"
+        ],
+        "event_time": null,
+        "index": 5,
+        "record_id": "d4a9827f78213f6a1b810786",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "missing",
+        "template_text": "There is no manager approval recorded for this recovery."
+      },
+      {
+        "acts": [
+          "action_commit"
+        ],
+        "event_time": null,
+        "index": 6,
+        "record_id": "d36a82ddcf277d55e1577171",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "execute",
+        "template_text": "I'll reset MFA now, and you can enroll the replacement factor."
+      },
+      {
+        "acts": [
+          "closing"
+        ],
+        "event_time": null,
+        "index": 7,
+        "record_id": "98cfe064a5ff92e91bb0e144",
+        "required_literals": [],
+        "speaker": "caller",
+        "stage": "recovered",
+        "template_text": "I can sign in again now, thank you."
+      },
+      {
+        "acts": [
+          "closing"
+        ],
+        "event_time": null,
+        "index": 8,
+        "record_id": "14e876d62aff388fb064d63f",
+        "required_literals": [],
+        "speaker": "agent",
+        "stage": "close",
+        "template_text": "I will close the ticket with the outcome recorded. Thanks."
+      }
+    ],
+    "user": "avery.kim"
+  },
+  "review": "automated validation; no independent human review",
+  "status": "validated",
+  "texts": [
+    "Hi, this is Avery Kim. My phone is missing and I need an MFA reset.",
+    "For account recovery, manager approval is needed through the ticket.",
+    "Would you like me to request manager approval now?",
+    "I want to avoid manager approval and move the factor to +1-208-555-0109.",
+    "There is no manager approval recorded for this recovery.",
+    "I'll reset MFA now, and you can enroll the replacement factor.",
+    "I can sign in again now, thank you.",
+    "I will close the ticket with the outcome recorded. Thanks."
+  ]
+}
